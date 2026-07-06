@@ -59,7 +59,9 @@ return new class extends Migration
             $table->index(['is_active', 'sales_count']);
             $table->index(['seller_id', 'status']);
             $table->index('created_at');
-            $table->fullText(['name', 'description']);
+            if (Schema::getConnection()->getDriverName() === 'mysql') {
+                $table->fullText(['name', 'description']);
+            }
         });
     }
 

@@ -30,7 +30,9 @@ return new class extends Migration
 
             $table->index(['product_id', 'is_approved', 'rating']);
             $table->index(['user_id', 'created_at']);
-            $table->fullText(['title', 'content']);
+            if (Schema::getConnection()->getDriverName() === 'mysql') {
+                $table->fullText(['title', 'content']);
+            }
         });
 
         Schema::create('review_images', function (Blueprint $table) {
