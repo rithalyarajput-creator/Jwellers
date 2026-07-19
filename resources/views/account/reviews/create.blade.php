@@ -9,7 +9,7 @@
                 <div class="flex-1 max-w-2xl">
                     {{-- Breadcrumb --}}
                     <div class="flex items-center gap-2 text-sm text-neutral-600 mb-5">
-                        <a href="{{ route('account.reviews') }}" class="hover:text-[#6F9CA2] transition-colors">My Reviews</a>
+                        <a href="{{ route('account.reviews') }}" class="hover:text-[#c9a227] transition-colors">My Reviews</a>
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         <span class="text-neutral-900 font-medium">Write a Review</span>
                     </div>
@@ -22,7 +22,7 @@
                             </div>
                             <h3 class="text-base font-semibold text-neutral-900 mb-1">Already reviewed</h3>
                             <p class="text-sm text-neutral-600 mb-4">You have already submitted a review for this product.</p>
-                            <a href="{{ route('account.reviews') }}" class="inline-flex items-center gap-2 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
+                            <a href="{{ route('account.reviews') }}" class="inline-flex items-center gap-2 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
                                 View My Reviews
                             </a>
                         </div>
@@ -35,7 +35,7 @@
                                          class="w-full h-full object-cover">
                                 </div>
                                 <div class="min-w-0">
-                                    <a href="{{ route('product.show', $product) }}" class="text-sm font-semibold text-neutral-900 hover:text-[#6F9CA2] transition-colors line-clamp-1">
+                                    <a href="{{ route('product.show', $product) }}" class="text-sm font-semibold text-neutral-900 hover:text-[#c9a227] transition-colors line-clamp-1">
                                         {{ $product->name }}
                                     </a>
                                     @if($product->brand)
@@ -110,7 +110,7 @@
                                         <label for="title" class="block text-xs font-medium text-neutral-600 mb-1">Review Title</label>
                                         <input type="text" name="title" id="title" value="{{ old('title') }}"
                                                placeholder="Summarize your experience"
-                                               class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50">
+                                               class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50">
                                         @error('title')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                         @enderror
@@ -121,7 +121,7 @@
                                         <label for="content" class="block text-xs font-medium text-neutral-600 mb-1">Detailed Review <span class="text-red-500">*</span></label>
                                         <textarea name="content" id="content" rows="4"
                                                   placeholder="What did you like or dislike? How was the quality? Would you recommend it?"
-                                                  class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50 resize-none">{{ old('content') }}</textarea>
+                                                  class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50 resize-none">{{ old('content') }}</textarea>
                                         @error('content')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                         @enderror
@@ -136,7 +136,7 @@
                                             </label>
                                             <textarea name="pros" id="pros" rows="3"
                                                       placeholder="Soft fabric&#10;True to size&#10;Great quality"
-                                                      class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50 resize-none">{{ old('pros') }}</textarea>
+                                                      class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50 resize-none">{{ old('pros') }}</textarea>
                                         </div>
                                         <div>
                                             <label for="cons" class="block text-xs font-medium text-neutral-600 mb-1 flex items-center gap-1">
@@ -145,7 +145,7 @@
                                             </label>
                                             <textarea name="cons" id="cons" rows="3"
                                                       placeholder="Packaging could be better&#10;Slightly expensive"
-                                                      class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50 resize-none">{{ old('cons') }}</textarea>
+                                                      class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50 resize-none">{{ old('cons') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -155,8 +155,8 @@
                             <div class="flex items-center gap-3 pt-2">
                                 <button type="submit"
                                         :disabled="rating === 0"
-                                        :class="rating === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#E07E0A]'"
-                                        class="inline-flex items-center gap-2 bg-[#F8931D] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors">
+                                        :class="rating === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#5f1721]'"
+                                        class="inline-flex items-center gap-2 bg-[#7a1f2b] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                     Submit Review
                                 </button>

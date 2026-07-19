@@ -21,8 +21,8 @@
                 <div class="flex-1 min-w-0">
                     <p class="text-sm text-neutral-700 leading-relaxed">
                         We use cookies to personalise content, run analytics, and show relevant ads.
-                        Read our <a href="{{ route('cookie-policy') }}" class="underline text-[#6F9CA2] hover:text-[#5B878D]">Cookie Policy</a>
-                        and <a href="{{ route('privacy') }}" class="underline text-[#6F9CA2] hover:text-[#5B878D]">Privacy Policy</a>.
+                        Read our <a href="{{ route('cookie-policy') }}" class="underline text-[#c9a227] hover:text-[#a9851f]">Cookie Policy</a>
+                        and <a href="{{ route('privacy') }}" class="underline text-[#c9a227] hover:text-[#a9851f]">Privacy Policy</a>.
                     </p>
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
@@ -31,7 +31,7 @@
                         Essential only
                     </button>
                     <button @click="acceptAll()"
-                            class="text-sm font-semibold text-white bg-[#F8931D] hover:bg-[#E07E0A] px-5 py-2 rounded-lg transition-colors whitespace-nowrap">
+                            class="text-sm font-semibold text-white bg-[#7a1f2b] hover:bg-[#5f1721] px-5 py-2 rounded-lg transition-colors whitespace-nowrap">
                         Accept all
                     </button>
                 </div>

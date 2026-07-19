@@ -23,33 +23,33 @@
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
     /* ============================
-       Purple Override → Teal (ForeverKids Brand)
+       Purple Override → Teal (Jwellers Brand)
        Remapped to match brand teal #6F9CA2
        ============================ */
-    --color-purple-50:  #f0f7f8;
-    --color-purple-100: #d9ecee;
-    --color-purple-200: #b3d9de;
-    --color-purple-300: #8dc6cd;
-    --color-purple-400: #6F9CA2;
-    --color-purple-500: #6F9CA2;
-    --color-purple-600: #5B878D;
-    --color-purple-700: #4A7A80;
-    --color-purple-800: #3A6166;
-    --color-purple-900: #2A494D;
-    --color-purple-950: #1A3133;
+    --color-purple-50:  #fbf7ef;
+    --color-purple-100: #f5ecd6;
+    --color-purple-200: #ebd7a8;
+    --color-purple-300: #ddbd6f;
+    --color-purple-400: #cfa848;
+    --color-purple-500: #c9a227;
+    --color-purple-600: #a9851f;
+    --color-purple-700: #86681c;
+    --color-purple-800: #6b531d;
+    --color-purple-900: #5a461d;
+    --color-purple-950: #33270d;
 
-    /* Primary (Brand Teal for customer-facing) */
-    --color-primary-50:  #f0f7f8;
-    --color-primary-100: #d9ecee;
-    --color-primary-200: #b3d9de;
-    --color-primary-300: #8dc6cd;
-    --color-primary-400: #6F9CA2;
-    --color-primary-500: #6F9CA2;
-    --color-primary-600: #5B878D;
-    --color-primary-700: #4A7A80;
-    --color-primary-800: #3A6166;
-    --color-primary-900: #2A494D;
-    --color-primary-950: #1A3133;
+    /* Primary (Brand Gold for customer-facing) */
+    --color-primary-50:  #fbf7ef;
+    --color-primary-100: #f5ecd6;
+    --color-primary-200: #ebd7a8;
+    --color-primary-300: #ddbd6f;
+    --color-primary-400: #cfa848;
+    --color-primary-500: #c9a227;
+    --color-primary-600: #a9851f;
+    --color-primary-700: #86681c;
+    --color-primary-800: #6b531d;
+    --color-primary-900: #5a461d;
+    --color-primary-950: #33270d;
 
     /* ============================
        Neutral (Material Design Grey)

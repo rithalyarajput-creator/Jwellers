@@ -165,7 +165,7 @@ class ShiprocketCatalogController extends Controller
             'id'         => $p->id,
             'title'      => (string) $p->name,
             'body_html'  => (string) ($p->description ?? ''),
-            'vendor'     => $p->brand?->name ?? 'ForeverKids',
+            'vendor'     => $p->brand?->name ?? 'Jwellers',
             'product_type' => $p->category?->name ?? '',
             'created_at' => $createdAt,
             'handle'     => (string) $p->slug,

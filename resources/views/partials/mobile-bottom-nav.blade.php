@@ -23,7 +23,7 @@
             <span x-cloak
                   x-show="$store.cart.itemCount > 0"
                   x-text="$store.cart.itemCount"
-                  class="absolute -top-1 right-0 w-5 h-5 bg-[#F8931D] text-white text-xs font-medium rounded-full flex items-center justify-center">
+                  class="absolute -top-1 right-0 w-5 h-5 bg-[#7a1f2b] text-white text-xs font-medium rounded-full flex items-center justify-center">
             </span>
         </a>
 
@@ -35,7 +35,7 @@
             <span x-cloak
                   x-show="$store.wishlist.count > 0"
                   x-text="$store.wishlist.count"
-                  class="absolute -top-1 right-0 w-5 h-5 bg-[#F8931D] text-white text-xs font-medium rounded-full flex items-center justify-center">
+                  class="absolute -top-1 right-0 w-5 h-5 bg-[#7a1f2b] text-white text-xs font-medium rounded-full flex items-center justify-center">
             </span>
         </a>
 

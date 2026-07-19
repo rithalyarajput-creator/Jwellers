@@ -3,7 +3,7 @@
 
 Hi {{ $order->user->first_name }},
 
-We hope you and your little one are enjoying your recent purchase! We would love to hear your thoughts on the items from order **#{{ $order->order_number }}**.
+We hope you are enjoying your recent purchase! We would love to hear your thoughts on the items from order **#{{ $order->order_number }}**.
 
 ---
 
@@ -21,14 +21,14 @@ We hope you and your little one are enjoying your recent purchase! We would love
 
 ## Get 5% Off Your Next Order!
 
-As a thank you for sharing your experience, we will send you a **5% discount code** after you submit your review. It is our way of saying thanks for helping other parents.
+As a thank you for sharing your experience, we will send you a **5% discount code** after you submit your review. It is our way of saying thanks for helping other customers.
 
 @component('mail::button', ['url' => url('/products'), 'color' => 'primary'])
 Review Your Purchases
 @endcomponent
 
-Your feedback helps other parents make the best choices for their kids.
+Your feedback helps other customers make the best choices.
 
 Warm regards,
-**{{ config('app.name', 'ForeverKids') }}**
+**{{ config('app.name', 'Jwellers') }}**
 @endcomponent

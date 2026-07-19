@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
         .card { background: white; border-radius: 12px; padding: 2.5rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); max-width: 400px; width: 90%; }
-        .spinner { width: 40px; height: 40px; border: 3px solid #e5e7eb; border-top-color: #6F9CA2; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1.25rem; }
+        .spinner { width: 40px; height: 40px; border: 3px solid #e5e7eb; border-top-color: #c9a227; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1.25rem; }
         @keyframes spin { to { transform: rotate(360deg); } }
         h2 { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem; }
         p { font-size: 13px; color: #6b7280; line-height: 1.5; }

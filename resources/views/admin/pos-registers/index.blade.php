@@ -78,7 +78,7 @@
         <p style="font-size: 13px; color: #854d0e; margin: 0; font-weight: 500;">How to use a new terminal</p>
         <ol style="font-size: 12px; color: #854d0e; margin: 6px 0 0 18px; line-height: 1.6;">
             <li>Create the terminal here and copy its Device ID</li>
-            <li>On the billing counter machine, visit <strong>https://foreverkidss.in/pos</strong></li>
+            <li>On the billing counter machine, visit <strong>https://jwellers.in/pos</strong></li>
             <li>Enter the Device ID in the registration screen and click <strong>Register Device</strong></li>
             <li>Staff can now log in with their PIN</li>
         </ol>

@@ -53,8 +53,8 @@
                     </div>
                     <div class="p-5">
                         <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 bg-[#6F9CA2]/10 rounded-full flex items-center justify-center shrink-0">
-                                <span class="text-xs font-semibold text-[#6F9CA2]">{{ strtoupper(substr(auth()->user()->first_name, 0, 1)) }}</span>
+                            <div class="w-8 h-8 bg-[#c9a227]/10 rounded-full flex items-center justify-center shrink-0">
+                                <span class="text-xs font-semibold text-[#c9a227]">{{ strtoupper(substr(auth()->user()->first_name, 0, 1)) }}</span>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <div class="flex items-center gap-2 mb-1">
@@ -71,11 +71,11 @@
 
                 <!-- Replies -->
                 @foreach($ticket->replies as $reply)
-                    <div class="bg-white border border-neutral-100 rounded-xl mb-4 {{ $reply->is_admin ? 'border-l-4 border-l-[#6F9CA2]' : '' }}">
+                    <div class="bg-white border border-neutral-100 rounded-xl mb-4 {{ $reply->is_admin ? 'border-l-4 border-l-[#c9a227]' : '' }}">
                         <div class="p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 {{ $reply->is_admin ? 'bg-[#F8931D]' : 'bg-[#6F9CA2]/10' }}">
-                                    <span class="text-xs font-semibold {{ $reply->is_admin ? 'text-white' : 'text-[#6F9CA2]' }}">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 {{ $reply->is_admin ? 'bg-[#7a1f2b]' : 'bg-[#c9a227]/10' }}">
+                                    <span class="text-xs font-semibold {{ $reply->is_admin ? 'text-white' : 'text-[#c9a227]' }}">
                                         {{ $reply->is_admin ? 'S' : strtoupper(substr(auth()->user()->first_name, 0, 1)) }}
                                     </span>
                                 </div>
@@ -83,7 +83,7 @@
                                     <div class="flex items-center gap-2 mb-1">
                                         <span class="text-sm font-medium text-neutral-900">{{ $reply->is_admin ? 'Support Team' : 'You' }}</span>
                                         @if($reply->is_admin)
-                                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-[#6F9CA2]/10 text-[#5B878D]">Staff</span>
+                                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-[#c9a227]/10 text-[#a9851f]">Staff</span>
                                         @endif
                                         <span class="text-xs text-neutral-600">{{ $reply->created_at->diffForHumans() }}</span>
                                     </div>
@@ -105,14 +105,14 @@
                         <form action="{{ route('account.tickets.reply', $ticket) }}" method="POST" class="p-5">
                             @csrf
                             <textarea name="message" rows="4" required
-                                      class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-200 rounded-xl text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#6F9CA2]/20 focus:border-[#6F9CA2] transition-all resize-none @error('message') border-red-300 @enderror"
+                                      class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-200 rounded-xl text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#c9a227]/20 focus:border-[#c9a227] transition-all resize-none @error('message') border-red-300 @enderror"
                                       placeholder="Type your reply...">{{ old('message') }}</textarea>
                             @error('message')
                                 <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                             @enderror
                             <div class="mt-3 flex justify-end">
                                 <button type="submit"
-                                        class="px-5 py-2 bg-[#F8931D] text-white text-sm font-semibold rounded-lg hover:bg-[#E07E0A] transition-colors">
+                                        class="px-5 py-2 bg-[#7a1f2b] text-white text-sm font-semibold rounded-lg hover:bg-[#5f1721] transition-colors">
                                     Send Reply
                                 </button>
                             </div>

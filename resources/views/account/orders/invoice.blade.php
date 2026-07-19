@@ -97,7 +97,7 @@
         {{-- Header --}}
         <div class="header">
             <div class="header-left">
-                <img src="/images/colorlogo.png" alt="ForeverKids" height="55" style="flex-shrink: 0;">
+                <img src="/images/colorlogo.png" alt="Jwellers" height="55" style="flex-shrink: 0;">
                 <div>
                     <div class="invoice-title">Invoice</div>
                     <div class="invoice-number">{{ $order->order_number }}</div>
@@ -253,7 +253,7 @@
 
         {{-- Footer --}}
         <div class="footer">
-            <div class="footer-thanks">Thank you for shopping with ForeverKids!</div>
+            <div class="footer-thanks">Thank you for shopping with Jwellers!</div>
             <div class="footer-url">{{ config('app.url') }}</div>
         </div>
     </div>

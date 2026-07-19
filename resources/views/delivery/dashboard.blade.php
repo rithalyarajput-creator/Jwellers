@@ -35,14 +35,14 @@
             </div>
         </div>
         <div class="card p-4 sm:p-5 flex items-center gap-3 sm:gap-4">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#6F9CA2]/10 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#c9a227]/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
                 </svg>
             </div>
             <div>
                 <p class="text-xs sm:text-sm text-neutral-600">Total Delivered</p>
-                <p class="text-xl sm:text-2xl font-bold text-[#6F9CA2]">{{ $stats['total_delivered'] }}</p>
+                <p class="text-xl sm:text-2xl font-bold text-[#c9a227]">{{ $stats['total_delivered'] }}</p>
             </div>
         </div>
         <a href="{{ route('delivery.returns.index') }}" class="card p-4 sm:p-5 flex items-center gap-3 sm:gap-4 hover:shadow-sm transition-shadow">

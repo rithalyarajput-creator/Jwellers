@@ -20,7 +20,7 @@
                             {{-- Header --}}
                             <div class="px-4 py-3 flex flex-wrap items-center justify-between gap-3 border-b border-neutral-100">
                                 <div class="flex items-center gap-3">
-                                    <a href="{{ route('account.returns.show', $return) }}" class="text-sm font-bold text-neutral-900 hover:text-[#6F9CA2] transition-colors">
+                                    <a href="{{ route('account.returns.show', $return) }}" class="text-sm font-bold text-neutral-900 hover:text-[#c9a227] transition-colors">
                                         {{ $return->return_number }}
                                     </a>
                                     @php
@@ -28,9 +28,9 @@
                                             'requested' => 'bg-amber-50 text-amber-700 border-amber-200',
                                             'approved' => 'bg-emerald-50 text-emerald-700 border-emerald-200',
                                             'rejected' => 'bg-red-50 text-red-700 border-red-200',
-                                            'pickup_scheduled' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
-                                            'picked_up' => 'bg-[#6F9CA2]/15 text-[#4A7A80] border-[#6F9CA2]/40',
-                                            'received' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
+                                            'pickup_scheduled' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
+                                            'picked_up' => 'bg-[#c9a227]/15 text-[#86681c] border-[#c9a227]/40',
+                                            'received' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
                                             'processed' => 'bg-cyan-50 text-cyan-700 border-cyan-200',
                                             'completed' => 'bg-emerald-50 text-emerald-700 border-emerald-200',
                                         ];
@@ -58,7 +58,7 @@
                             <div class="px-4 py-3">
                                 <div class="flex items-center gap-2 mb-2">
                                     <span class="text-xs text-neutral-600">Order</span>
-                                    <a href="{{ route('account.orders.show', $return->order) }}" class="text-xs font-medium text-[#6F9CA2] hover:text-[#5B878D]">
+                                    <a href="{{ route('account.orders.show', $return->order) }}" class="text-xs font-medium text-[#c9a227] hover:text-[#a9851f]">
                                         {{ $return->order->order_number }}
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@
                                 @else
                                     <span></span>
                                 @endif
-                                <a href="{{ route('account.returns.show', $return) }}" class="text-xs font-semibold text-[#6F9CA2] hover:text-[#5B878D] inline-flex items-center gap-1">
+                                <a href="{{ route('account.returns.show', $return) }}" class="text-xs font-semibold text-[#c9a227] hover:text-[#a9851f] inline-flex items-center gap-1">
                                     View Details
                                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
@@ -97,7 +97,7 @@
                             </div>
                             <h3 class="text-base font-semibold text-neutral-900 mb-1">No returns yet</h3>
                             <p class="text-sm text-neutral-600 mb-5">You haven't submitted any return requests.</p>
-                            <a href="{{ route('account.orders.index') }}" class="inline-flex items-center gap-2 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
+                            <a href="{{ route('account.orders.index') }}" class="inline-flex items-center gap-2 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
                                 View Orders
                             </a>
                         </div>

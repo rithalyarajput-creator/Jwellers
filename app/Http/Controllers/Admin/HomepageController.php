@@ -28,8 +28,8 @@ class HomepageController extends Controller
     {
         $settings = [
             'site_logo' => Setting::get('site_logo', ''),
-            'site_name' => Setting::get('site_name', 'ForeverKids'),
-            'site_tagline' => Setting::get('site_tagline', 'Unlock Your Natural Beauty'),
+            'site_name' => Setting::get('site_name', 'Jwellers'),
+            'site_tagline' => Setting::get('site_tagline', 'Timeless Elegance in Every Piece'),
             'site_description' => Setting::get('site_description', ''),
             'footer_about' => Setting::get('footer_about', ''),
             'footer_copyright' => Setting::get('footer_copyright', ''),

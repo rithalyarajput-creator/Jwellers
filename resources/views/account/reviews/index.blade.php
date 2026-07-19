@@ -37,7 +37,7 @@
                                     <div class="flex-1 min-w-0">
                                         {{-- Top row: product name + status --}}
                                         <div class="flex items-start justify-between gap-2 mb-1.5">
-                                            <a href="{{ route('product.show', $review->product) }}" class="text-sm font-semibold text-neutral-900 hover:text-[#6F9CA2] transition-colors line-clamp-1">
+                                            <a href="{{ route('product.show', $review->product) }}" class="text-sm font-semibold text-neutral-900 hover:text-[#c9a227] transition-colors line-clamp-1">
                                                 {{ $review->product->name }}
                                             </a>
                                             @php
@@ -106,7 +106,7 @@
                             </div>
                             <h3 class="text-base font-semibold text-neutral-900 mb-1">No reviews yet</h3>
                             <p class="text-sm text-neutral-600 mb-5">Share your experience with products you've purchased.</p>
-                            <a href="{{ route('account.orders.index') }}" class="inline-flex items-center gap-2 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
+                            <a href="{{ route('account.orders.index') }}" class="inline-flex items-center gap-2 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
                                 View Orders
                             </a>
                         </div>

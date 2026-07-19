@@ -6,10 +6,10 @@
 ])
 
 @php
-    // Foreverkids-tinted Shiprocket button. Visual matches the Shiprocket
+    // Jwellers-tinted Shiprocket button. Visual matches the Shiprocket
     // reference (BUY NOW + 'Powered by Shiprocket' badge below) so customers
-    // recognise the express-checkout flow. Color uses the Foreverkids primary
-    // teal (#6F9CA2) instead of Shiprocket's cyan to fit the brand.
+    // recognise the express-checkout flow. Color uses the Jwellers primary
+    // teal (#c9a227) instead of Shiprocket's cyan to fit the brand.
     $sizeClasses = match ($size) {
         'sm' => ['py' => 'py-2',     'text' => 'text-[12px]', 'badgeText' => 'text-[8px]',  'gap' => 'gap-0.5'],
         'md' => ['py' => 'py-2.5',   'text' => 'text-[13px]', 'badgeText' => 'text-[9px]',  'gap' => 'gap-0.5'],
@@ -25,7 +25,7 @@
         :class="{ 'opacity-60 cursor-wait': $store.cart.checkoutPending }"
         {{ $attributes->merge([
             'class' => "$widthClass {$sizeClasses['py']} px-4 flex flex-col items-center justify-center {$sizeClasses['gap']} rounded-full font-bold tracking-wide text-white transition-all shadow-md hover:shadow-lg",
-            'style' => 'background: linear-gradient(135deg, #6F9CA2 0%, #4f7d83 100%); border: 1px solid #4f7d83;',
+            'style' => 'background: linear-gradient(135deg, #c9a227 0%, #4f7d83 100%); border: 1px solid #4f7d83;',
         ]) }}>
     {{-- Top: BUY NOW / CHECKOUT --}}
     <span class="{{ $sizeClasses['text'] }} font-bold leading-none"

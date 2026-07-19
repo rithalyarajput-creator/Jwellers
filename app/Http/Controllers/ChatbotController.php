@@ -102,12 +102,12 @@ class ChatbotController extends Controller
 
     private function buildSystemPrompt(array $products, array $orders, array $coupons): string
     {
-        $storeName = Setting::get('site_name', config('app.name', 'ForeverKids'));
+        $storeName = Setting::get('site_name', config('app.name', 'Jwellers'));
 
-        $prompt  = "You are the official AI Shopping Assistant for {$storeName}, a premium kids' clothing e-commerce store in India.\n\n";
+        $prompt  = "You are the official AI Shopping Assistant for {$storeName}, a premium jewellery e-commerce store in India.\n\n";
 
         $prompt .= "## Your Personality\n";
-        $prompt .= "- Warm, friendly, and enthusiastic about children's fashion.\n";
+        $prompt .= "- Warm, friendly, and enthusiastic about fine jewellery.\n";
         $prompt .= "- Professional, sales-focused, but never pushy.\n";
         $prompt .= "- Concise: keep responses under 120 words unless a detailed answer is clearly needed.\n";
         $prompt .= "- Never fabricate product details, prices, availability, or policies.\n";
@@ -117,7 +117,7 @@ class ChatbotController extends Controller
         $prompt .= "- **Shipping**: Free on orders above ₹499. Standard delivery in 3–7 business days. Express delivery available at checkout for select cities.\n";
         $prompt .= "- **Returns**: 7-day return window from delivery. Items must be unused with original tags. Initiate via Account → Returns on the website.\n";
         $prompt .= "- **Payments**: UPI, credit/debit cards, net banking, digital wallets, and Cash on Delivery (COD up to ₹5,000).\n";
-        $prompt .= "- **Size Guide**: Available at /size-guide. We stock sizes from newborn (0–3 months) up to age 15.\n";
+        $prompt .= "- **Size Guide**: Available at /size-guide. Ring sizes and chain lengths are listed on each product page and available on request.\n";
         $prompt .= "- **Order Tracking**: Available at Account → Orders, or use the Track Order page with your order number.\n\n";
 
         if (!empty($coupons)) {
@@ -219,13 +219,13 @@ class ChatbotController extends Controller
     private function findRelevantProducts(string $message): array
     {
         $intentKeywords = [
-            'dress', 'shirt', 't-shirt', 'tshirt', 'pant', 'jeans', 'skirt', 'frock',
-            'jacket', 'sweater', 'hoodie', 'romper', 'onesie', 'uniform', 'shoe', 'shoes',
-            'sandal', 'sock', 'socks', 'kurta', 'leggings', 'shorts', 'pajama', 'nightwear',
-            'party wear', 'newborn', 'baby', 'toddler', 'infant',
+            'necklace', 'earring', 'earrings', 'jhumka', 'ring', 'bangle', 'bracelet',
+            'kada', 'mangalsutra', 'pendant', 'locket', 'chain', 'anklet', 'payal',
+            'nose pin', 'nath', 'bridal set', 'jewellery', 'jewelry', 'ornament',
+            'gold', 'silver', 'diamond', 'platinum', 'gemstone', 'stone', 'kundan', 'polki',
             'show', 'find', 'buy', 'search', 'looking for', 'recommend', 'suggest',
-            'product', 'cloth', 'wear', 'outfit', 'clothes', 'clothing', 'apparel',
-            'boys', 'girls', 'kids', 'children', 'child', 'size', 'age',
+            'product', 'wear', 'gift', 'set', 'collection',
+            'women', 'men', 'ladies', 'size', 'weight',
         ];
 
         $lower = strtolower($message);

@@ -1,5 +1,5 @@
 {{--
-    ForeverKids AI Shopping Assistant Widget
+    Jwellers AI Shopping Assistant Widget
     Floating chatbot in the bottom-right corner.
     Z-index z-[75] — above quick-view modal (z-70).
     Alpine.js: chatbotWidget() — defined in <script> below.
@@ -98,7 +98,7 @@
                         <template x-for="chip in quickChips" :key="chip.label">
                             <button
                                 @click="sendQuickChip(chip.message)"
-                                class="text-[11px] px-3 py-1.5 rounded-full border border-[#6F9CA2]/40 text-[#6F9CA2] bg-white hover:bg-[#6F9CA2]/8 transition-colors font-medium whitespace-nowrap"
+                                class="text-[11px] px-3 py-1.5 rounded-full border border-[#c9a227]/40 text-[#c9a227] bg-white hover:bg-[#c9a227]/8 transition-colors font-medium whitespace-nowrap"
                                 x-text="chip.label"
                             ></button>
                         </template>
@@ -142,7 +142,7 @@
                                         <template x-for="product in msg.products" :key="product.id">
                                             <a
                                                 :href="product.url"
-                                                class="shrink-0 w-[108px] bg-white rounded-xl border border-neutral-100 overflow-hidden hover:shadow-md hover:border-[#6F9CA2]/30 transition-all block"
+                                                class="shrink-0 w-[108px] bg-white rounded-xl border border-neutral-100 overflow-hidden hover:shadow-md hover:border-[#c9a227]/30 transition-all block"
                                             >
                                                 <div class="relative w-full aspect-square bg-neutral-50 overflow-hidden">
                                                     <img
@@ -167,7 +167,7 @@
                                                     <template x-if="product.has_discount">
                                                         <p class="text-[9px] text-neutral-600 line-through" x-text="product.mrp"></p>
                                                     </template>
-                                                    <div class="mt-1.5 text-center text-[9px] font-semibold text-[#6F9CA2] border border-[#6F9CA2]/40 rounded-md py-0.5 hover:bg-[#6F9CA2] hover:text-white hover:border-[#6F9CA2] transition-colors">
+                                                    <div class="mt-1.5 text-center text-[9px] font-semibold text-[#c9a227] border border-[#c9a227]/40 rounded-md py-0.5 hover:bg-[#c9a227] hover:text-white hover:border-[#c9a227] transition-colors">
                                                         View →
                                                     </div>
                                                 </div>
@@ -206,7 +206,7 @@
                 <template x-for="chip in quickChips" :key="chip.label">
                     <button
                         @click="sendQuickChip(chip.message)"
-                        class="shrink-0 text-[10px] px-2.5 py-1 rounded-full border border-neutral-200 text-neutral-600 bg-neutral-50 hover:bg-[#6F9CA2]/10 hover:border-[#6F9CA2]/40 hover:text-[#6F9CA2] transition-colors whitespace-nowrap"
+                        class="shrink-0 text-[10px] px-2.5 py-1 rounded-full border border-neutral-200 text-neutral-600 bg-neutral-50 hover:bg-[#c9a227]/10 hover:border-[#c9a227]/40 hover:text-[#c9a227] transition-colors whitespace-nowrap"
                         x-text="chip.label"
                     ></button>
                 </template>

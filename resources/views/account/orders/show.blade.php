@@ -26,11 +26,11 @@
                         </div>
                         @php
                             $statusColors = [
-                                'confirmed' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
-                                'processing' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
-                                'packed' => 'bg-[#6F9CA2]/10 text-[#5B878D] border-[#6F9CA2]/30',
-                                'shipped' => 'bg-[#6F9CA2]/15 text-[#4A7A80] border-[#6F9CA2]/40',
-                                'out_for_delivery' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
+                                'confirmed' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
+                                'processing' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
+                                'packed' => 'bg-[#c9a227]/10 text-[#a9851f] border-[#c9a227]/30',
+                                'shipped' => 'bg-[#c9a227]/15 text-[#86681c] border-[#c9a227]/40',
+                                'out_for_delivery' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
                                 'delivered' => 'bg-emerald-50 text-emerald-700 border-emerald-200',
                                 'cancelled' => 'bg-red-50 text-red-700 border-red-200',
                                 'returned' => 'bg-neutral-100 text-neutral-700 border-neutral-200',
@@ -304,8 +304,8 @@
                                     </div>
                                     <div class="space-y-2">
                                         <div class="flex items-center gap-2.5">
-                                            <div class="w-8 h-8 rounded-full bg-[#6F9CA2]/10 flex items-center justify-center">
-                                                <svg class="w-4 h-4 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div class="w-8 h-8 rounded-full bg-[#c9a227]/10 flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                                                 </svg>
                                             </div>
@@ -394,7 +394,7 @@
                                     <form action="{{ route('account.orders.reorder', $order) }}" method="POST">
                                         @csrf
                                         <button type="submit"
-                                                class="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-[#F8931D] text-white text-[13px] font-semibold rounded-lg hover:bg-[#E07E0A] transition-colors">
+                                                class="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-[#7a1f2b] text-white text-[13px] font-semibold rounded-lg hover:bg-[#5f1721] transition-colors">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                                             </svg>

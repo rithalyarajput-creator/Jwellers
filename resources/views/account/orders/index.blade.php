@@ -33,7 +33,7 @@
                         @foreach($statuses as $value => $label)
                             <a href="{{ route('account.orders.index', $value ? ['status' => $value] : []) }}"
                                class="shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors
-                                      {{ $currentStatus === $value ? 'bg-[#F8931D] text-white' : 'bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300 hover:text-neutral-800' }}">
+                                      {{ $currentStatus === $value ? 'bg-[#7a1f2b] text-white' : 'bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300 hover:text-neutral-800' }}">
                                 {{ $label }}
                             </a>
                         @endforeach
@@ -44,11 +44,11 @@
                         @php
                             $statusColors = [
                                 'pending' => 'bg-amber-50 text-amber-700 border-amber-200',
-                                'confirmed' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
-                                'processing' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
-                                'packed' => 'bg-[#6F9CA2]/10 text-[#5B878D] border-[#6F9CA2]/30',
-                                'shipped' => 'bg-[#6F9CA2]/15 text-[#4A7A80] border-[#6F9CA2]/40',
-                                'out_for_delivery' => 'bg-[#6F9CA2]/5 text-[#5B878D] border-[#6F9CA2]/30',
+                                'confirmed' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
+                                'processing' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
+                                'packed' => 'bg-[#c9a227]/10 text-[#a9851f] border-[#c9a227]/30',
+                                'shipped' => 'bg-[#c9a227]/15 text-[#86681c] border-[#c9a227]/40',
+                                'out_for_delivery' => 'bg-[#c9a227]/5 text-[#a9851f] border-[#c9a227]/30',
                                 'delivered' => 'bg-emerald-50 text-emerald-700 border-emerald-200',
                                 'completed' => 'bg-emerald-50 text-emerald-700 border-emerald-200',
                                 'cancelled' => 'bg-red-50 text-red-700 border-red-200',
@@ -60,7 +60,7 @@
                             {{-- Header --}}
                             <div class="px-4 py-3 flex flex-wrap items-center justify-between gap-3 border-b border-neutral-100">
                                 <div class="flex items-center gap-3">
-                                    <a href="{{ route('account.orders.show', $order) }}" class="text-sm font-bold text-neutral-900 hover:text-[#6F9CA2] transition-colors">
+                                    <a href="{{ route('account.orders.show', $order) }}" class="text-sm font-bold text-neutral-900 hover:text-[#c9a227] transition-colors">
                                         {{ $order->order_number }}
                                     </a>
                                     <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full border {{ $color }}">
@@ -109,7 +109,7 @@
                             {{-- Footer --}}
                             <div class="px-4 py-2.5 bg-neutral-50 border-t border-neutral-100 flex flex-wrap items-center justify-between gap-2">
                                 <div class="flex items-center gap-3">
-                                    <a href="{{ route('account.orders.show', $order) }}" class="text-xs font-semibold text-[#6F9CA2] hover:text-[#5B878D] inline-flex items-center gap-1">
+                                    <a href="{{ route('account.orders.show', $order) }}" class="text-xs font-semibold text-[#c9a227] hover:text-[#a9851f] inline-flex items-center gap-1">
                                         View Details
                                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                     </a>
@@ -123,7 +123,7 @@
                                 @if(in_array($order->status, ['delivered', 'completed']))
                                     <form action="{{ route('account.orders.reorder', $order) }}" method="POST">
                                         @csrf
-                                        <button type="submit" class="text-xs font-semibold text-[#F8931D] hover:text-[#E07E0A] inline-flex items-center gap-1 transition-colors">
+                                        <button type="submit" class="text-xs font-semibold text-[#7a1f2b] hover:text-[#5f1721] inline-flex items-center gap-1 transition-colors">
                                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                                             Buy Again
                                         </button>
@@ -149,7 +149,7 @@
                             </div>
                             <h3 class="text-base font-semibold text-neutral-900 mb-1">No orders yet</h3>
                             <p class="text-sm text-neutral-600 mb-5">Start shopping to see your orders here.</p>
-                            <a href="{{ route('products.index') }}" class="inline-flex items-center gap-2 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
+                            <a href="{{ route('products.index') }}" class="inline-flex items-center gap-2 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
                                 Browse Products
                             </a>
                         </div>

@@ -2,7 +2,7 @@
     <x-slot name="title">Returns Policy - {{ config('app.name') }}</x-slot>
 
     @push('meta')
-        <meta name="description" content="Returns and exchange policy for {{ config('app.name') }}. Easy returns on kids' clothing within the return window.">
+        <meta name="description" content="Returns and exchange policy for {{ config('app.name') }}. Easy returns on jewellery within the return window.">
         <link rel="canonical" href="{{ url('/returns') }}">
     @endpush
 

@@ -16,14 +16,14 @@
 
     @php
         $iconBg = match($page->slug) {
-            'privacy-policy'   => 'bg-[#6F9CA2]/5',
+            'privacy-policy'   => 'bg-[#c9a227]/5',
             'terms-of-service' => 'bg-neutral-100',
             'cookie-policy'    => 'bg-amber-50',
             'gdpr'             => 'bg-primary-50',
             default            => 'bg-neutral-100',
         };
         $iconColor = match($page->slug) {
-            'privacy-policy'   => 'text-[#6F9CA2]',
+            'privacy-policy'   => 'text-[#c9a227]',
             'terms-of-service' => 'text-neutral-600',
             'cookie-policy'    => 'text-amber-600',
             'gdpr'             => 'text-primary-600',

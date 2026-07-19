@@ -23,7 +23,7 @@
       gtag('config', '{{ $ga4Id }}');
     </script>
     @endif
-    <title>Coming Soon - {{ config('app.name', 'ForeverKids') }}</title>
+    <title>Coming Soon - {{ config('app.name', 'Jwellers') }}</title>
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -34,7 +34,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #6F9CA2 0%, #3A6166 100%);
+            background: linear-gradient(135deg, #c9a227 0%, #6b531d 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -57,7 +57,7 @@
         h1 {
             font-size: 26px;
             font-weight: 700;
-            color: #3A6166;
+            color: #6b531d;
             margin-bottom: 6px;
         }
         .subtitle {
@@ -94,8 +94,8 @@
             margin-bottom: 4px;
         }
         .phone-group:focus-within {
-            border-color: #6F9CA2;
-            box-shadow: 0 0 0 3px rgba(111,156,162,0.15);
+            border-color: #c9a227;
+            box-shadow: 0 0 0 3px rgba(201,162,39,0.15);
         }
         .phone-prefix {
             padding: 12px 14px;
@@ -119,7 +119,7 @@
         .btn-primary {
             width: 100%;
             padding: 13px;
-            background: #F8931D;
+            background: #7a1f2b;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -131,7 +131,7 @@
             margin-top: 12px;
         }
         .btn-primary:hover, .btn-primary:focus-visible {
-            background: #E07E0A;
+            background: #5f1721;
             outline: none;
         }
         .btn-primary:focus-visible { box-shadow: 0 0 0 3px rgba(248,147,29,0.3); }
@@ -171,7 +171,7 @@
             font-family: inherit;
             padding: 4px;
         }
-        .preview-toggle:hover { color: #3A6166; }
+        .preview-toggle:hover { color: #6b531d; }
         .preview-box {
             margin-top: 12px;
             padding-top: 12px;
@@ -189,8 +189,8 @@
         }
         .preview-box input[type=password]:focus,
         .preview-box input[type=text]:focus {
-            border-color: #6F9CA2;
-            box-shadow: 0 0 0 3px rgba(111,156,162,0.15);
+            border-color: #c9a227;
+            box-shadow: 0 0 0 3px rgba(201,162,39,0.15);
         }
         .password-wrap { position: relative; }
         .password-toggle {
@@ -207,12 +207,12 @@
             align-items: center;
             border-radius: 6px;
         }
-        .password-toggle:hover { color: #3A6166; background: #f5f5f5; }
+        .password-toggle:hover { color: #6b531d; background: #f5f5f5; }
         .password-toggle svg { width: 18px; height: 18px; }
         .btn-secondary {
             width: 100%;
             padding: 11px;
-            background: #6F9CA2;
+            background: #c9a227;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -223,13 +223,13 @@
             margin-top: 8px;
             transition: background 0.15s;
         }
-        .btn-secondary:hover { background: #5B878D; }
+        .btn-secondary:hover { background: #a9851f; }
         .footer-text {
             margin-top: 22px;
             font-size: 11px;
             color: #a3a3a3;
         }
-        .footer-text a { color: #6F9CA2; text-decoration: none; }
+        .footer-text a { color: #c9a227; text-decoration: none; }
         [hidden] { display: none !important; }
         @media (prefers-reduced-motion: reduce) {
             * { transition: none !important; }
@@ -238,10 +238,10 @@
 </head>
 <body>
     <main class="card">
-        <img class="logo" src="{{ asset('images/colorlogo.png') }}" alt="ForeverKids">
+        <img class="logo" src="{{ asset('images/colorlogo.png') }}" alt="Jwellers">
 
         <h1>Something Adorable is Coming Soon 💛</h1>
-        <p class="subtitle">We're almost ready to bring you styles your kids will love.</p>
+        <p class="subtitle">We're almost ready to bring you jewellery you'll love.</p>
 
         @if(session('waitlist_success'))
             <div class="success">Thanks! We'll notify you on launch day.</div>
@@ -303,7 +303,7 @@
             &nbsp;&middot;&nbsp;
             <a href="{{ route('contact') }}">Contact</a>
         </p>
-        <p class="footer-text" style="margin-top: 8px;">&copy; {{ date('Y') }} {{ config('app.name', 'ForeverKids') }}. All rights reserved.</p>
+        <p class="footer-text" style="margin-top: 8px;">&copy; {{ date('Y') }} {{ config('app.name', 'Jwellers') }}. All rights reserved.</p>
     </main>
 
     <script>

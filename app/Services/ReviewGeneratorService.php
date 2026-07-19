@@ -118,7 +118,7 @@ class ReviewGeneratorService
 
     private function randomChildTerm(): string
     {
-        $terms = ['son', 'daughter', 'kid', 'little one', 'child', 'toddler', 'baby', 'kiddo'];
+        $terms = ['wife', 'mother', 'sister', 'daughter', 'friend', 'partner'];
         return $terms[array_rand($terms)];
     }
 
@@ -132,18 +132,18 @@ class ReviewGeneratorService
     {
         $name = strtolower($productName . ' ' . $categorySlug);
 
-        if (preg_match('/dress|frock|gown|lehenga/', $name)) return 'dress';
-        if (preg_match('/shirt|t-shirt|tee|top/', $name)) return 'top';
-        if (preg_match('/pant|jeans|trouser|legging|shorts/', $name)) return 'bottom';
-        if (preg_match('/shoe|sandal|slipper|boot/', $name)) return 'shoes';
-        if (preg_match('/toy|puzzle|game|block/', $name)) return 'toy';
-        if (preg_match('/bag|backpack/', $name)) return 'bag';
-        if (preg_match('/set|combo|outfit/', $name)) return 'set';
-        if (preg_match('/jacket|sweater|hoodie|coat/', $name)) return 'winter wear';
-        if (preg_match('/sock|underwear|innerwear/', $name)) return 'innerwear';
-        if (preg_match('/accessory|bow|clip|band|watch/', $name)) return 'accessory';
+        if (preg_match('/necklace|neckpiece|choker/', $name)) return 'necklace';
+        if (preg_match('/earring|jhumka|stud/', $name)) return 'pair of earrings';
+        if (preg_match('/ring|band/', $name)) return 'ring';
+        if (preg_match('/bangle|bracelet|kada|kada/', $name)) return 'bangle';
+        if (preg_match('/mangalsutra/', $name)) return 'mangalsutra';
+        if (preg_match('/pendant|locket/', $name)) return 'pendant';
+        if (preg_match('/chain/', $name)) return 'chain';
+        if (preg_match('/bridal|set|combo/', $name)) return 'set';
+        if (preg_match('/nose|nath/', $name)) return 'nose pin';
+        if (preg_match('/anklet|payal/', $name)) return 'anklet';
 
-        return 'product';
+        return 'piece';
     }
 
     private function fillPlaceholders(string $template, Product $product, string $productType, string $childTerm, string $timeframe = ''): string
@@ -268,68 +268,68 @@ class ReviewGeneratorService
     {
         return match (true) {
             $rating >= 5 => [
-                'Bought this {product_type} for my {child_term} and it turned out to be a great purchase. The quality is excellent and the material feels premium. Really happy with how it looks and fits.',
-                'I\'ve been looking for a good {product_type} for {timeframe} and finally found this one. My {child_term} absolutely loves it. The colors are vibrant and haven\'t faded after washing.',
-                'This {product_type} is amazing! My {child_term} has been using it for {timeframe} now and it still looks brand new. Definitely worth the money.',
+                'Bought this {product_type} for my {child_term} and it turned out to be a great purchase. The quality is excellent and the finish feels premium. Really happy with how it looks and shines.',
+                'I\'ve been looking for a good {product_type} for {timeframe} and finally found this one. My {child_term} absolutely loves it. The shine is beautiful and it hasn\'t tarnished at all.',
+                'This {product_type} is amazing! My {child_term} has been wearing it for {timeframe} now and it still looks brand new. Definitely worth the money.',
                 'Ordered this for my {child_term}\'s birthday and it was a hit! The quality exceeded my expectations. Packaging was also very neat and presentable.',
-                'Excellent product! The {product_type} fits perfectly and my {child_term} is very comfortable wearing it. The stitching is neat and the fabric is soft. Will definitely order more from here.',
+                'Excellent product! The {product_type} fits perfectly and my {child_term} is very comfortable wearing it. The craftsmanship is detailed and the finish is flawless. Will definitely order more from here.',
                 'Very impressed with this {product_type}. It\'s exactly as shown in the pictures. My {child_term} loves the design and I love the quality. Fast shipping too!',
-                'This is our third purchase from ForeverKids and every time the quality has been consistent. This {product_type} is no exception. Soft fabric, great fit, and my {child_term} is happy.',
-                'I was skeptical about ordering online for my {child_term} but this {product_type} changed my mind. The material is breathable and comfortable. Highly recommend to other parents.',
-                'My {child_term} picked this out and couldn\'t wait to use it. It\'s been {timeframe} and the quality is holding up great. We\'re very pleased with this purchase.',
-                'Just received this {product_type} and I\'m thoroughly impressed. The attention to detail is wonderful. My {child_term} loves it and I would definitely order from ForeverKids again.',
-                'Fantastic quality for the price! The {product_type} is well-made and my {child_term} is very comfortable. The design is cute and unique. Very happy with this find.',
-                'This {product_type} is honestly one of the best I\'ve bought for my {child_term}. The material is soft, the colors are beautiful, and it washes well. A definite winner!',
+                'This is our third purchase from Jwellers and every time the quality has been consistent. This {product_type} is no exception. Beautiful finish, great craftsmanship, and I am delighted.',
+                'I was skeptical about ordering jewellery online for my {child_term} but this {product_type} changed my mind. The finish is elegant and comfortable to wear. Highly recommend to other shoppers.',
+                'My {child_term} picked this out and couldn\'t wait to wear it. It\'s been {timeframe} and the quality is holding up great. We\'re very pleased with this purchase.',
+                'Just received this {product_type} and I\'m thoroughly impressed. The attention to detail is wonderful. I love it and I would definitely order from Jwellers again.',
+                'Fantastic quality for the price! The {product_type} is well-made and my {child_term} is very comfortable wearing it. The design is elegant and unique. Very happy with this find.',
+                'This {product_type} is honestly one of the best I\'ve bought for my {child_term}. The finish is flawless, the shine is beautiful, and it wears well. A definite winner!',
                 'Was looking for something special for my {child_term} and this {product_type} did not disappoint. Everyone compliments it when we go out. Great quality and great price.',
-                'Purchased this {product_type} after reading other reviews and I\'m glad I did. My {child_term} has been using it constantly. The quality is exceptional for what you pay.',
-                'Absolutely love this {product_type}! My {child_term} refuses to take it off. The material is soft against the skin and the design is adorable. Will be buying more!',
-                'I compared this with several other options and this {product_type} stood out for the quality. My {child_term} has been using it for {timeframe} and it still looks amazing.',
-                'Such a lovely {product_type}! My {child_term} looks adorable in it. The fabric quality is really good and it\'s very comfortable. Delivery was quick too.',
-                'Really pleased with this purchase. The {product_type} is well-stitched and the material is high quality. My {child_term} loves wearing it. Would recommend to friends.',
+                'Purchased this {product_type} after reading other reviews and I\'m glad I did. My {child_term} has been wearing it constantly. The quality is exceptional for what you pay.',
+                'Absolutely love this {product_type}! My {child_term} refuses to take it off. It sits beautifully and the design is stunning. Will be buying more!',
+                'I compared this with several other options and this {product_type} stood out for the quality. My {child_term} has been wearing it for {timeframe} and it still looks amazing.',
+                'Such a lovely {product_type}! My {child_term} looks gorgeous in it. The finish quality is really good and it\'s very comfortable. Delivery was quick too.',
+                'Really pleased with this purchase. The {product_type} is beautifully crafted and the finish is high quality. My {child_term} loves wearing it. Would recommend to friends.',
                 'This is exactly what I expected and more. The {product_type} fits perfectly and my {child_term} is very happy with it. Great experience shopping here.',
-                'Wonderful {product_type}! Got so many compliments on it. My {child_term} is comfortable and loves the design. Will definitely come back for more.',
+                'Wonderful {product_type}! Got so many compliments on it. My {child_term} loves wearing it and adores the design. Will definitely come back for more.',
             ],
             $rating >= 4 => [
                 'Good {product_type} overall. My {child_term} likes it and the quality is decent for the price. Only minor thing is the sizing runs a tiny bit small.',
-                'Bought this for my {child_term} and it\'s a solid purchase. Nice material and good stitching. Could be slightly better in terms of color accuracy from the photos.',
-                'Happy with this {product_type}. My {child_term} has been wearing it for {timeframe}. The quality is good though I wish the fabric was a bit thicker.',
-                'Pretty good {product_type} for the price point. My {child_term} is comfortable in it. Delivery was prompt. Would have given 5 stars if packaging was a bit better.',
-                'Nice {product_type}! My {child_term} likes wearing it. The quality is better than what I expected at this price range. Just a small loose thread that I trimmed off.',
-                'Got this for my {child_term} and it\'s mostly great. Good quality fabric and nice design. The color is slightly different from the picture but still looks good.',
-                'Decent purchase. My {child_term} enjoys using this {product_type}. It\'s well-made and comfortable. Minor issue with sizing but overall satisfied.',
+                'Bought this for my {child_term} and it\'s a solid purchase. Nice finish and good craftsmanship. Could be slightly better in terms of colour accuracy from the photos.',
+                'Happy with this {product_type}. My {child_term} has been wearing it for {timeframe}. The quality is good though I wish it was a bit more substantial.',
+                'Pretty good {product_type} for the price point. My {child_term} is comfortable wearing it. Delivery was prompt. Would have given 5 stars if packaging was a bit better.',
+                'Nice {product_type}! My {child_term} likes wearing it. The quality is better than what I expected at this price range. Just a tiny finishing mark that I barely noticed.',
+                'Got this for my {child_term} and it\'s mostly great. Good quality finish and nice design. The colour is slightly different from the picture but still looks good.',
+                'Decent purchase. My {child_term} enjoys wearing this {product_type}. It\'s well-made and comfortable. Minor issue with sizing but overall satisfied.',
                 'This {product_type} is quite nice. My {child_term} wears it regularly. Good quality and value for money. Shipping was fast. Would recommend with minor reservations.',
-                'I like this {product_type} a lot. My {child_term} is happy with it. The material feels good and it looks exactly like the pictures. Just wish it came in more colors.',
-                'Solid {product_type} from ForeverKids. My {child_term} has been using it for {timeframe}. Good quality but took a bit longer to deliver than expected.',
-                'My {child_term} looks great in this {product_type}. The quality is quite good and the price is fair. Small improvement needed in the stitching around the edges.',
-                'Good buy! The {product_type} fits my {child_term} well. Material is soft and comfortable. One small thing - the care instructions tag is a bit scratchy.',
-                'Purchased this for my {child_term} and I\'m satisfied with it. Nice design and good fabric quality. Would have preferred a zip instead of buttons though.',
+                'I like this {product_type} a lot. My {child_term} is happy with it. The finish feels good and it looks exactly like the pictures. Just wish it came in more designs.',
+                'Solid {product_type} from Jwellers. I have been wearing it for {timeframe}. Good quality but took a bit longer to deliver than expected.',
+                'My {child_term} looks great in this {product_type}. The quality is quite good and the price is fair. Small improvement needed in the finishing around the edges.',
+                'Good buy! The {product_type} suits my {child_term} well. Finish is smooth and comfortable. One small thing - the clasp is a bit stiff.',
+                'Purchased this for my {child_term} and I\'m satisfied with it. Nice design and good finish quality. Would have preferred a sturdier clasp though.',
                 'Overall a good {product_type}. My {child_term} likes it. Quality is good for the price. Just needs slightly better packaging for delivery.',
-                'Nice {product_type} from ForeverKids. My {child_term} is comfortable and likes the design. Value for money. Would buy again if they fix the slight color inconsistency.',
+                'Nice {product_type} from Jwellers. I am comfortable wearing it and love the design. Value for money. Would buy again if they fix the slight color inconsistency.',
             ],
             $rating >= 3 => [
-                'The {product_type} is okay. Not bad but not exceptional either. My {child_term} wears it but the fabric quality could be better for what I paid.',
-                'Average {product_type}. It serves its purpose and my {child_term} doesn\'t complain. The design is fine but the material feels a bit thin.',
-                'Mixed feelings about this one. The design looks nice but the quality doesn\'t feel premium. My {child_term} uses it occasionally. Fair for the price.',
-                'It\'s alright. My {child_term} doesn\'t mind it but the sizing was off and the fabric shrank a bit after washing. Okay product overall.',
-                'Decent {product_type} for casual use. My {child_term} has it for {timeframe} now. The stitching could be better but it\'s acceptable for the price.',
+                'The {product_type} is okay. Not bad but not exceptional either. My {child_term} wears it but the finish quality could be better for what I paid.',
+                'Average {product_type}. It serves its purpose and my {child_term} doesn\'t complain. The design is fine but the finish feels a bit light.',
+                'Mixed feelings about this one. The design looks nice but the quality doesn\'t feel premium. My {child_term} wears it occasionally. Fair for the price.',
+                'It\'s alright. My {child_term} doesn\'t mind it but the sizing was off and the shine dulled a bit over time. Okay product overall.',
+                'Decent {product_type} for everyday use. My {child_term} has had it for {timeframe} now. The finishing could be better but it\'s acceptable for the price.',
                 'Got this for my {child_term} and it\'s average quality. The design from the photos looks better than in person. Not bad but I expected more.',
                 'The {product_type} is fine for everyday use. My {child_term} wears it sometimes. Quality is standard, nothing to write home about.',
-                'OK product. My {child_term} uses it but it\'s not their favourite. The material is acceptable and the design is simple. Meets basic expectations.',
-                'Average purchase. The {product_type} looks decent but the fabric quality is just okay. My {child_term} finds it comfortable enough. Fair value.',
-                'Not great, not terrible. This {product_type} does the job. My {child_term} has it for {timeframe}. Some loose threads but still wearable.',
+                'OK product. My {child_term} wears it but it\'s not their favourite. The finish is acceptable and the design is simple. Meets basic expectations.',
+                'Average purchase. The {product_type} looks decent but the finish quality is just okay. My {child_term} finds it comfortable enough. Fair value.',
+                'Not great, not terrible. This {product_type} does the job. My {child_term} has had it for {timeframe}. Some rough edges but still wearable.',
             ],
             $rating >= 2 => [
-                'Honestly expected better. The {product_type} quality is below what I thought I\'d get. My {child_term} doesn\'t find it comfortable. The material feels cheap.',
-                'The {product_type} looked much better in the photos. In person, the quality is disappointing. My {child_term} wore it once and the stitching started coming apart.',
-                'Not happy with this purchase. The sizing is way off and the fabric quality is poor. My {child_term} doesn\'t like wearing it. Would not recommend at this price.',
-                'Below average {product_type}. The material shrank after first wash and the colors faded. My {child_term} doesn\'t want to wear it anymore.',
-                'Disappointed with the quality of this {product_type}. For the price paid, I expected much better. The fabric is thin and the stitching is messy in places.',
+                'Honestly expected better. The {product_type} quality is below what I thought I\'d get. My {child_term} doesn\'t find it comfortable. The finish feels cheap.',
+                'The {product_type} looked much better in the photos. In person, the quality is disappointing. My {child_term} wore it once and the plating started coming off.',
+                'Not happy with this purchase. The sizing is way off and the finish quality is poor. My {child_term} doesn\'t like wearing it. Would not recommend at this price.',
+                'Below average {product_type}. It tarnished quickly and the shine faded. My {child_term} doesn\'t want to wear it anymore.',
+                'Disappointed with the quality of this {product_type}. For the price paid, I expected much better. The finish is thin and the craftsmanship is messy in places.',
                 'Not worth it. The {product_type} quality is poor and doesn\'t match the product images at all. My {child_term} found it uncomfortable. Returning this.',
             ],
             default => [
-                'Very poor quality {product_type}. The material feels terrible and the stitching is falling apart. Completely different from what was shown online. Very disappointed.',
-                'Terrible purchase. The {product_type} arrived with defects and my {child_term} couldn\'t even use it. Complete waste of money. Would not recommend to anyone.',
-                'Worst {product_type} I\'ve bought. Cheap fabric, poor construction, and nothing like the pictures. Regret buying this. Stay away.',
+                'Very poor quality {product_type}. The finish feels terrible and the piece is falling apart. Completely different from what was shown online. Very disappointed.',
+                'Terrible purchase. The {product_type} arrived with defects and my {child_term} couldn\'t even wear it. Complete waste of money. Would not recommend to anyone.',
+                'Worst {product_type} I\'ve bought. Cheap finish, poor construction, and nothing like the pictures. Regret buying this. Stay away.',
             ],
         };
     }
@@ -353,57 +353,57 @@ class ReviewGeneratorService
 
         $category = strtolower($categorySlug);
 
-        if (str_contains($category, 'cloth') || str_contains($category, 'dress') || str_contains($category, 'wear') || str_contains($category, 'shirt') || str_contains($category, 'girl') || str_contains($category, 'boy')) {
+        if (str_contains($category, 'necklace') || str_contains($category, 'pendant') || str_contains($category, 'chain') || str_contains($category, 'mangalsutra')) {
             return array_merge($general, [
-                'Soft fabric',
-                'True to size',
-                'Easy to wash',
-                'Vibrant colours',
-                'Breathable material',
-                'Neat stitching',
-                'No colour fading after wash',
+                'Elegant finish',
+                'Perfect length',
+                'Beautiful shine',
+                'Skin-friendly metal',
+                'Secure clasp',
+                'Detailed craftsmanship',
+                'Does not tarnish',
                 'Comfortable for all-day wear',
-                'Skin-friendly fabric',
-                'Stretchy and flexible',
+                'Lightweight yet sturdy',
+                'Looks premium',
             ]);
         }
 
-        if (str_contains($category, 'toy') || str_contains($category, 'game') || str_contains($category, 'puzzle')) {
+        if (str_contains($category, 'earring') || str_contains($category, 'jhumka')) {
             return array_merge($general, [
-                'Safe materials',
-                'Keeps kids engaged',
-                'Sturdy build',
-                'Educational value',
-                'Non-toxic paint',
-                'Age-appropriate design',
-                'Bright and attractive',
-                'Smooth edges, child safe',
-                'Promotes creativity',
-                'Easy to assemble',
+                'Lightweight and comfortable',
+                'Secure backs',
+                'Beautiful sparkle',
+                'Hypoallergenic',
+                'Elegant design',
+                'Does not tarnish',
+                'Perfect size',
+                'Great for daily wear',
+                'Skin-friendly',
+                'Well-finished edges',
             ]);
         }
 
-        if (str_contains($category, 'shoe') || str_contains($category, 'foot')) {
+        if (str_contains($category, 'ring') || str_contains($category, 'band')) {
             return array_merge($general, [
-                'Comfortable sole',
-                'Good grip',
-                'Lightweight',
+                'Comfortable fit',
+                'Beautiful shine',
                 'True to size',
-                'Easy to put on',
-                'Durable material',
-                'Supports foot well',
-                'Breathable design',
+                'Secure stone setting',
+                'Elegant finish',
+                'Does not tarnish',
+                'Skin-friendly metal',
+                'Detailed craftsmanship',
             ]);
         }
 
-        if (str_contains($category, 'bag') || str_contains($category, 'backpack')) {
+        if (str_contains($category, 'bangle') || str_contains($category, 'bracelet') || str_contains($category, 'kada')) {
             return array_merge($general, [
-                'Spacious compartments',
-                'Sturdy zippers',
-                'Lightweight yet strong',
-                'Water-resistant material',
-                'Comfortable straps',
-                'Attractive design',
+                'Elegant design',
+                'Secure clasp',
+                'Comfortable to wear',
+                'Beautiful shine',
+                'Does not tarnish',
+                'Well-finished edges',
             ]);
         }
 
@@ -417,16 +417,16 @@ class ReviewGeneratorService
             'Colour slightly different from photo',
             'Packaging could be better',
             'Delivery took a bit longer',
-            'Could use better buttons',
-            'Fabric is a bit thin',
+            'Clasp could be sturdier',
+            'Finish is a bit light',
             'Care instructions not very clear',
-            'Limited colour choices',
+            'Limited size options',
             'Price is a touch high',
-            'Wrinkled on arrival',
-            'Tags are a bit scratchy',
-            'Wish it came with a pouch',
-            'Zipper feels a little stiff',
-            'Print faded slightly after wash',
+            'Minor scratch on arrival',
+            'Slightly heavier than expected',
+            'Wish it came with a jewellery pouch',
+            'Clasp feels a little stiff',
+            'Shine dulled slightly over time',
         ];
     }
 }

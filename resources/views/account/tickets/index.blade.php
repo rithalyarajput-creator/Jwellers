@@ -14,7 +14,7 @@
             <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between mb-5">
                     <h1 class="text-xl font-bold text-neutral-900">Support Tickets</h1>
-                    <a href="{{ route('account.tickets.create') }}" class="inline-flex items-center gap-1.5 px-4 py-2 bg-[#F8931D] text-white text-sm font-semibold rounded-lg hover:bg-[#E07E0A] transition-colors">
+                    <a href="{{ route('account.tickets.create') }}" class="inline-flex items-center gap-1.5 px-4 py-2 bg-[#7a1f2b] text-white text-sm font-semibold rounded-lg hover:bg-[#5f1721] transition-colors">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                         </svg>
@@ -31,19 +31,19 @@
                 <!-- Filter -->
                 <div class="flex gap-2 mb-4">
                     <a href="{{ route('account.tickets.index') }}"
-                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ !request('status') ? 'bg-[#6F9CA2]/10 text-[#5B878D]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
+                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ !request('status') ? 'bg-[#c9a227]/10 text-[#a9851f]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
                         All
                     </a>
                     <a href="{{ route('account.tickets.index', ['status' => 'open']) }}"
-                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ request('status') === 'open' ? 'bg-[#6F9CA2]/10 text-[#5B878D]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
+                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ request('status') === 'open' ? 'bg-[#c9a227]/10 text-[#a9851f]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
                         Open
                     </a>
                     <a href="{{ route('account.tickets.index', ['status' => 'answered']) }}"
-                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ request('status') === 'answered' ? 'bg-[#6F9CA2]/10 text-[#5B878D]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
+                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ request('status') === 'answered' ? 'bg-[#c9a227]/10 text-[#a9851f]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
                         Answered
                     </a>
                     <a href="{{ route('account.tickets.index', ['status' => 'closed']) }}"
-                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ request('status') === 'closed' ? 'bg-[#6F9CA2]/10 text-[#5B878D]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
+                       class="px-3 py-1.5 rounded-full text-xs font-medium {{ request('status') === 'closed' ? 'bg-[#c9a227]/10 text-[#a9851f]' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200' }} transition-colors">
                         Closed
                     </a>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="space-y-3">
                     @forelse($tickets as $ticket)
                         <a href="{{ route('account.tickets.show', $ticket) }}"
-                           class="block bg-white border border-neutral-100 rounded-xl p-4 hover:border-[#6F9CA2]/30 hover:shadow-sm transition-all">
+                           class="block bg-white border border-neutral-100 rounded-xl p-4 hover:border-[#c9a227]/30 hover:shadow-sm transition-all">
                             <div class="flex items-start justify-between gap-3">
                                 <div class="flex-1 min-w-0">
                                     <div class="flex items-center gap-2 mb-1">
@@ -87,7 +87,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
                             </svg>
                             <p class="text-sm text-neutral-600 mb-3">No support tickets yet</p>
-                            <a href="{{ route('account.tickets.create') }}" class="text-sm text-[#6F9CA2] font-medium hover:underline">Raise your first ticket</a>
+                            <a href="{{ route('account.tickets.create') }}" class="text-sm text-[#c9a227] font-medium hover:underline">Raise your first ticket</a>
                         </div>
                     @endforelse
                 </div>

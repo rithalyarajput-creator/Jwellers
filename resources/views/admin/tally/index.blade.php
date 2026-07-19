@@ -57,7 +57,7 @@
                 @endif
             @endif
 
-            <button type="submit" style="width: 100%; padding: 12px; background: #F8931D; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">
+            <button type="submit" style="width: 100%; padding: 12px; background: #7a1f2b; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">
                 Download Tally XML
             </button>
         </form>

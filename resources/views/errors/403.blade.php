@@ -37,7 +37,7 @@
             width: 6rem;
             height: 6rem;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #F8931D 0%, #E07E0A 100%);
+            background: linear-gradient(135deg, #7a1f2b 0%, #5f1721 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -76,7 +76,7 @@
             transition: all 0.2s;
         }
         .btn-primary {
-            background: linear-gradient(to right, #F8931D, #E07E0A);
+            background: linear-gradient(to right, #7a1f2b, #5f1721);
             color: #fff;
             box-shadow: 0 4px 12px rgba(248, 147, 29, 0.25);
         }
@@ -86,7 +86,7 @@
             color: #555;
             border: 1px solid #ddd;
         }
-        .btn-outline:hover { border-color: #6F9CA2; color: #6F9CA2; }
+        .btn-outline:hover { border-color: #c9a227; color: #c9a227; }
         .btn svg { width: 1rem; height: 1rem; }
     </style>
 </head>

@@ -2,10 +2,10 @@
     <x-slot name="title">{{ $siteSettings['site_name'] }} - {{ $siteSettings['site_tagline'] }}</x-slot>
 
     @push('meta')
-        <meta name="description" content="{{ $siteSettings['site_tagline'] }} - Shop kids' clothing, dresses, and accessories online at {{ $siteSettings['site_name'] }}.">
+        <meta name="description" content="{{ $siteSettings['site_tagline'] }} - Shop fine gold, diamond, and silver jewellery online at {{ $siteSettings['site_name'] }}.">
         <link rel="canonical" href="{{ url('/') }}">
         <meta property="og:title" content="{{ $siteSettings['site_name'] }} - {{ $siteSettings['site_tagline'] }}">
-        <meta property="og:description" content="Shop kids' clothing, dresses, and accessories online at {{ $siteSettings['site_name'] }}.">
+        <meta property="og:description" content="Shop fine gold, diamond, and silver jewellery online at {{ $siteSettings['site_name'] }}.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url('/') }}">
         @if($siteSettings['site_logo'])
@@ -13,7 +13,7 @@
         @endif
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="{{ $siteSettings['site_name'] }} - {{ $siteSettings['site_tagline'] }}">
-        <meta name="twitter:description" content="Shop kids' clothing, dresses, and accessories online at {{ $siteSettings['site_name'] }}.">
+        <meta name="twitter:description" content="Shop fine gold, diamond, and silver jewellery online at {{ $siteSettings['site_name'] }}.">
 
         {{-- Organization + WebSite JSON-LD --}}
         <script type="application/ld+json">
@@ -29,7 +29,7 @@
                         '@type' => 'ImageObject',
                         'url' => asset('images/colorlogo.png'),
                     ],
-                    'description' => $siteSettings['site_tagline'] . ' - Shop kids\' clothing, dresses, and accessories online.',
+                    'description' => $siteSettings['site_tagline'] . ' - Shop fine gold, diamond, and silver jewellery online.',
                     'contactPoint' => [
                         '@type' => 'ContactPoint',
                         'contactType' => 'customer service',
@@ -60,11 +60,11 @@
         <style>
             /* ===== TiberTaber-inspired Design System ===== */
             :root {
-                --primary: #6f9ca2;
-                --primary-light: rgba(111,156,162,.08);
-                --primary-dark: #5B878D;
-                --accent: #f8931d;
-                --accent-dark: #E07E0A;
+                --primary: #c9a227;
+                --primary-light: rgba(201,162,39,.08);
+                --primary-dark: #a9851f;
+                --accent: #7a1f2b;
+                --accent-dark: #5f1721;
                 --text-dark: #222222;
                 --text-muted: #666;
                 --bg-warm: #f8f6f3;
@@ -409,7 +409,7 @@
                 <button @click="dismiss()" class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-white/80 hover:text-white rounded-full hover:bg-white/10 transition-colors z-10">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
-                <div class="relative bg-gradient-to-br from-[#F8931D] via-[#E07E0A] to-[#D47200] px-6 pt-8 pb-6 text-center overflow-hidden">
+                <div class="relative bg-gradient-to-br from-[#7a1f2b] via-[#5f1721] to-[#D47200] px-6 pt-8 pb-6 text-center overflow-hidden">
                     <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/5 rounded-full"></div>
                     <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-white/5 rounded-full"></div>
                     <div class="relative inline-flex items-center justify-center w-14 h-14 bg-white/15 rounded-full mb-4 ring-4 ring-white/10">
@@ -442,7 +442,7 @@
                         <span class="font-semibold text-neutral-700">{{ $flashSale->products_count }} {{ Str::plural('product', $flashSale->products_count) }}</span> on sale
                     </p>
                     <a href="{{ route('products.index') }}?flash_sale={{ $flashSale->slug }}" @click="dismiss()"
-                       class="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-bold rounded-xl shadow-lg transition-all hover:-translate-y-0.5">
+                       class="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-bold rounded-xl shadow-lg transition-all hover:-translate-y-0.5">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                         Shop the Sale Now
                     </a>
@@ -553,8 +553,8 @@
     @if($categories->count() && (!isset($sections['categories']) || $sections['categories']->is_active))
         @php
             $subcatGradients = [
-                'linear-gradient(135deg, #6F9CA2 0%, #5B878D 100%)',
-                'linear-gradient(135deg, #F8931D 0%, #E07E0A 100%)',
+                'linear-gradient(135deg, #c9a227 0%, #a9851f 100%)',
+                'linear-gradient(135deg, #7a1f2b 0%, #5f1721 100%)',
                 'linear-gradient(135deg, #C1539C 0%, #A04080 100%)',
                 'linear-gradient(135deg, #6FC2A2 0%, #4DAA85 100%)',
                 'linear-gradient(135deg, #7B8CDE 0%, #5A6BC7 100%)',
@@ -585,7 +585,7 @@
                                 @if($rootCategory->image_url)
                                     <img src="{{ asset('storage/' . $rootCategory->image_url) }}" alt="{{ $rootCategory->name }}" loading="lazy">
                                 @else
-                                    <div class="w-full h-full min-h-[320px] bg-gradient-to-br from-[#6F9CA2]/20 to-[#6F9CA2]/5"></div>
+                                    <div class="w-full h-full min-h-[320px] bg-gradient-to-br from-[#c9a227]/20 to-[#c9a227]/5"></div>
                                 @endif
                                 <div class="collage-collection__banner-text">
                                     <span>Shop For</span>
@@ -717,7 +717,7 @@
          ========================================== -->
     @if(isset($sections['promo_banner']) && $sections['promo_banner']->is_active)
         @php $promo = $sections['promo_banner']; @endphp
-        <section class="relative overflow-hidden" style="background-color: {{ $promo->background_color ?? '#6F9CA2' }};">
+        <section class="relative overflow-hidden" style="background-color: {{ $promo->background_color ?? '#c9a227' }};">
             @if($promo->image_url)
                 <img src="{{ asset('storage/' . $promo->image_url) }}" alt="{{ $promo->title }}" class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/40"></div>
@@ -728,7 +728,7 @@
                     <p class="text-base sm:text-lg mb-6 max-w-xl mx-auto" style="color: {{ $promo->text_color ?? '#ffffff' }}; opacity: 0.85;">{{ $promo->subtitle }}</p>
                 @endif
                 @if($promo->button_text)
-                    <a href="{{ $promo->button_link ?? route('products.index') }}" class="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#6F9CA2] rounded-full font-semibold text-sm hover:bg-neutral-100 transition-colors shadow-lg">
+                    <a href="{{ $promo->button_link ?? route('products.index') }}" class="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#c9a227] rounded-full font-semibold text-sm hover:bg-neutral-100 transition-colors shadow-lg">
                         {{ $promo->button_text }}
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -796,7 +796,7 @@
                     @endforeach
                 </div>
                 <div class="text-center mt-8">
-                    <a href="{{ route('new-arrivals') }}" class="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#6F9CA2] border border-[#6F9CA2] rounded-full font-medium text-sm hover:bg-[#6F9CA2] hover:text-white transition-colors">
+                    <a href="{{ route('new-arrivals') }}" class="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#c9a227] border border-[#c9a227] rounded-full font-medium text-sm hover:bg-[#c9a227] hover:text-white transition-colors">
                         View All New Arrivals
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -812,7 +812,7 @@
     <section class="newsletter">
         <div class="container mx-auto px-4">
             <div class="max-w-2xl mx-auto text-center">
-                <h2>{{ $sections['newsletter']->title ?? 'Join the ForeverKids Family' }}</h2>
+                <h2>{{ $sections['newsletter']->title ?? 'Join the Jwellers Family' }}</h2>
                 @if(isset($sections['newsletter']) && $sections['newsletter']->subtitle)
                     <p class="text-white/80 text-sm mb-4">{{ $sections['newsletter']->subtitle }}</p>
                 @endif

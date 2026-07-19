@@ -54,7 +54,7 @@
         <p style="font-size: 13px; color: #075985; margin: 0; font-weight: 500;">After creating the terminal</p>
         <ol style="font-size: 12px; color: #0c4a6e; margin: 6px 0 0 18px; line-height: 1.6;">
             <li>Go to the billing counter machine</li>
-            <li>Open <strong>https://foreverkidss.in/pos</strong> in a browser</li>
+            <li>Open <strong>https://jwellers.in/pos</strong> in a browser</li>
             <li>Type the Device ID and click <strong>Register Device</strong></li>
             <li>Staff can then log in with their PIN</li>
         </ol>

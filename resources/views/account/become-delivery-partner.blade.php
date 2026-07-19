@@ -15,7 +15,7 @@
                 currentStep: {{ $partner ? ($partner->hasDocuments() ? 3 : 2) : 1 }}
             }">
                 {{-- Header --}}
-                <div class="rounded-xl p-5 sm:p-6 mb-6 bg-gradient-to-r from-[#6F9CA2]/50 to-[#6F9CA2] text-white">
+                <div class="rounded-xl p-5 sm:p-6 mb-6 bg-gradient-to-r from-[#c9a227]/50 to-[#c9a227] text-white">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@
                     {{-- Step 1 --}}
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors"
-                             :class="currentStep >= 1 ? (currentStep > 1 ? 'bg-success-500 text-white' : 'bg-[#F8931D] text-white') : 'bg-neutral-200 text-neutral-600'">
+                             :class="currentStep >= 1 ? (currentStep > 1 ? 'bg-success-500 text-white' : 'bg-[#7a1f2b] text-white') : 'bg-neutral-200 text-neutral-600'">
                             <template x-if="currentStep > 1">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                             </template>
@@ -69,7 +69,7 @@
                     {{-- Step 2 --}}
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors"
-                             :class="currentStep >= 2 ? (currentStep > 2 ? 'bg-success-500 text-white' : 'bg-[#F8931D] text-white') : 'bg-neutral-200 text-neutral-600'">
+                             :class="currentStep >= 2 ? (currentStep > 2 ? 'bg-success-500 text-white' : 'bg-[#7a1f2b] text-white') : 'bg-neutral-200 text-neutral-600'">
                             <template x-if="currentStep > 2">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                             </template>
@@ -85,7 +85,7 @@
                     {{-- Step 3 --}}
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors"
-                             :class="currentStep >= 3 ? 'bg-[#F8931D] text-white' : 'bg-neutral-200 text-neutral-600'">
+                             :class="currentStep >= 3 ? 'bg-[#7a1f2b] text-white' : 'bg-neutral-200 text-neutral-600'">
                             <span>3</span>
                         </div>
                         <span class="text-sm font-medium hidden sm:inline" :class="currentStep >= 3 ? 'text-neutral-900' : 'text-neutral-600'">Verification</span>
@@ -108,14 +108,14 @@
                                         <div>
                                             <label for="phone" class="block text-sm font-medium text-neutral-700 mb-1.5">Phone Number <span class="text-error-500">*</span></label>
                                             <input type="text" name="phone" id="phone" value="{{ old('phone', auth()->user()->phone) }}" required
-                                                   class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                                                   class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                                    placeholder="e.g. +91 9876543210">
                                             @error('phone') <p class="mt-1 text-xs text-error-600">{{ $message }}</p> @enderror
                                         </div>
                                         <div>
                                             <label for="vehicle_type" class="block text-sm font-medium text-neutral-700 mb-1.5">Vehicle Type <span class="text-error-500">*</span></label>
                                             <select name="vehicle_type" id="vehicle_type" required
-                                                    class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors">
+                                                    class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors">
                                                 <option value="">Select vehicle type</option>
                                                 <option value="bike" @selected(old('vehicle_type') === 'bike')>Bike</option>
                                                 <option value="scooter" @selected(old('vehicle_type') === 'scooter')>Scooter</option>
@@ -131,14 +131,14 @@
                                         <div>
                                             <label for="vehicle_number" class="block text-sm font-medium text-neutral-700 mb-1.5">Vehicle Number</label>
                                             <input type="text" name="vehicle_number" id="vehicle_number" value="{{ old('vehicle_number') }}"
-                                                   class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                                                   class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                                    placeholder="e.g. MH 02 AB 1234">
                                             @error('vehicle_number') <p class="mt-1 text-xs text-error-600">{{ $message }}</p> @enderror
                                         </div>
                                         <div>
                                             <label for="license_number" class="block text-sm font-medium text-neutral-700 mb-1.5">License Number</label>
                                             <input type="text" name="license_number" id="license_number" value="{{ old('license_number') }}"
-                                                   class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                                                   class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                                    placeholder="e.g. MH-0220170012345">
                                             @error('license_number') <p class="mt-1 text-xs text-error-600">{{ $message }}</p> @enderror
                                         </div>
@@ -147,14 +147,14 @@
                                     <div>
                                         <label for="company_name" class="block text-sm font-medium text-neutral-700 mb-1.5">Company Name <span class="text-xs text-neutral-600">(Optional)</span></label>
                                         <input type="text" name="company_name" id="company_name" value="{{ old('company_name') }}"
-                                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                                placeholder="If you represent a delivery company">
                                         @error('company_name') <p class="mt-1 text-xs text-error-600">{{ $message }}</p> @enderror
                                     </div>
                                 </div>
 
                                 <div class="px-5 py-4 bg-neutral-50 border-t border-neutral-100 flex items-center justify-end">
-                                    <button type="submit" class="px-6 py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors inline-flex items-center gap-2">
+                                    <button type="submit" class="px-6 py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors inline-flex items-center gap-2">
                                         Next: Upload Documents
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </button>
@@ -238,7 +238,7 @@
                                                 <span class="text-xs text-neutral-600 ml-auto">Upload again to replace</span>
                                             </div>
                                         @endif
-                                        <label class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-[#6F9CA2] hover:bg-[#6F9CA2]/5/50 transition-colors">
+                                        <label class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-[#c9a227] hover:bg-[#c9a227]/5/50 transition-colors">
                                             <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                             <span class="text-sm text-neutral-600" x-text="idProofName || 'Choose file...'"></span>
                                             <input type="file" name="id_proof" class="hidden" accept=".jpg,.jpeg,.png,.pdf"
@@ -260,7 +260,7 @@
                                                 <span class="text-xs text-neutral-600 ml-auto">Upload again to replace</span>
                                             </div>
                                         @endif
-                                        <label class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-[#6F9CA2] hover:bg-[#6F9CA2]/5/50 transition-colors">
+                                        <label class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-[#c9a227] hover:bg-[#c9a227]/5/50 transition-colors">
                                             <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                             <span class="text-sm text-neutral-600" x-text="licenseName || 'Choose file...'"></span>
                                             <input type="file" name="license_document" class="hidden" accept=".jpg,.jpeg,.png,.pdf"
@@ -282,7 +282,7 @@
                                                 <span class="text-xs text-neutral-600 ml-auto">Upload again to replace</span>
                                             </div>
                                         @endif
-                                        <label class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-[#6F9CA2] hover:bg-[#6F9CA2]/5/50 transition-colors">
+                                        <label class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-[#c9a227] hover:bg-[#c9a227]/5/50 transition-colors">
                                             <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                             <span class="text-sm text-neutral-600" x-text="addressProofName || 'Choose file...'"></span>
                                             <input type="file" name="address_proof" class="hidden" accept=".jpg,.jpeg,.png,.pdf"
@@ -297,7 +297,7 @@
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
                                         Back
                                     </button>
-                                    <button type="submit" class="px-6 py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors inline-flex items-center gap-2">
+                                    <button type="submit" class="px-6 py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors inline-flex items-center gap-2">
                                         Submit Documents
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </button>
@@ -307,7 +307,7 @@
                     @else
                         <div class="bg-white border border-neutral-100 rounded-xl p-6 text-center">
                             <p class="text-sm text-neutral-600">Please complete Step 1 first.</p>
-                            <button @click="currentStep = 1" class="mt-3 text-sm text-[#6F9CA2] hover:text-[#5B878D] font-medium">Go to Step 1</button>
+                            <button @click="currentStep = 1" class="mt-3 text-sm text-[#c9a227] hover:text-[#a9851f] font-medium">Go to Step 1</button>
                         </div>
                     @endif
                 </div>
@@ -326,7 +326,7 @@
                                     <h2 class="text-lg font-bold text-success-700 mb-1">You're Verified!</h2>
                                     <p class="text-sm text-neutral-600 mb-1">Partner ID: <strong>{{ $partner->partner_id }}</strong></p>
                                     <p class="text-sm text-neutral-600 mb-5">Your account is verified and active. You can now access the Delivery Panel to start accepting orders.</p>
-                                    <a href="{{ route('delivery.login') }}" class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors">
+                                    <a href="{{ route('delivery.login') }}" class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                                         Go to Delivery Panel
                                     </a>
@@ -344,7 +344,7 @@
                                         </div>
                                     @endif
                                     <p class="text-sm text-neutral-600 mb-5">Please re-upload your documents to try again.</p>
-                                    <button @click="currentStep = 2" class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors">
+                                    <button @click="currentStep = 2" class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                         Re-upload Documents
                                     </button>
@@ -360,7 +360,7 @@
                                     <p class="text-sm text-neutral-600 mb-5">Your documents have been submitted and are being reviewed by our team. We'll notify you once the verification is complete.</p>
 
                                     <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                                        <button @click="currentStep = 2" class="text-sm text-[#6F9CA2] hover:text-[#5B878D] font-medium inline-flex items-center gap-1.5">
+                                        <button @click="currentStep = 2" class="text-sm text-[#c9a227] hover:text-[#a9851f] font-medium inline-flex items-center gap-1.5">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                             Update Documents
                                         </button>

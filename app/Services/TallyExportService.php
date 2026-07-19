@@ -15,7 +15,7 @@ class TallyExportService
     public function buildXml(int $storeId, Carbon $from, Carbon $to): string
     {
         $store = Store::findOrFail($storeId);
-        $companyName = $store->name ?: config('app.name', 'ForeverKids');
+        $companyName = $store->name ?: config('app.name', 'Jwellers');
 
         $sales = PosSale::with(['items.product', 'customer'])
             ->where('store_id', $storeId)
@@ -99,7 +99,7 @@ class TallyExportService
         $xml->writeElement('REFERENCE', $sale->sale_number);
         $xml->writeElement('NARRATION', 'POS sale at ' . $store->name . ' on ' . $sale->created_at->format('d-M-Y H:i'));
         $xml->writeElement('ISINVOICE', 'Yes');
-        $xml->writeElement('ENTEREDBY', 'ForeverKids POS');
+        $xml->writeElement('ENTEREDBY', 'Jwellers POS');
         if ($store->gst_number) {
             $xml->writeElement('PARTYGSTIN', '');
             $xml->writeElement('COMPANYGSTIN', $store->gst_number);

@@ -19,7 +19,7 @@
                         <label class="flex items-center gap-2.5 cursor-pointer group py-0.5">
                             <input type="radio" name="category" value="{{ $category->slug }}"
                                    {{ request('category') === $category->slug ? 'checked' : '' }}
-                                   class="w-3.5 h-3.5 border-neutral-300 text-[#6F9CA2] focus:ring-[#6F9CA2] focus:ring-offset-0"
+                                   class="w-3.5 h-3.5 border-neutral-300 text-[#c9a227] focus:ring-[#c9a227] focus:ring-offset-0"
                                    onchange="this.form.submit()">
                             <span class="text-sm text-neutral-600 group-hover:text-neutral-900 transition-colors">{{ $category->name }}</span>
                         </label>
@@ -45,7 +45,7 @@
                         <label class="flex items-center gap-2.5 cursor-pointer group py-0.5">
                             <input type="checkbox" name="subcategory[]" value="{{ $sub->slug }}"
                                    {{ in_array($sub->slug, (array) request('subcategory')) ? 'checked' : '' }}
-                                   class="w-3.5 h-3.5 rounded border-neutral-300 text-[#6F9CA2] focus:ring-[#6F9CA2] focus:ring-offset-0">
+                                   class="w-3.5 h-3.5 rounded border-neutral-300 text-[#c9a227] focus:ring-[#c9a227] focus:ring-offset-0">
                             <span class="text-sm text-neutral-600 group-hover:text-neutral-900 transition-colors">{{ $sub->name }}</span>
                         </label>
                     @endforeach
@@ -68,13 +68,13 @@
                 <div class="relative flex-1">
                     <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-neutral-600">₹</span>
                     <input type="number" name="min_price" value="{{ request('min_price') }}"
-                           placeholder="Min" class="w-full pl-6 pr-2 py-2 text-sm border border-neutral-200 rounded-lg focus:outline-none focus:border-[#6F9CA2] bg-neutral-50">
+                           placeholder="Min" class="w-full pl-6 pr-2 py-2 text-sm border border-neutral-200 rounded-lg focus:outline-none focus:border-[#c9a227] bg-neutral-50">
                 </div>
                 <span class="text-neutral-300 text-sm">—</span>
                 <div class="relative flex-1">
                     <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-neutral-600">₹</span>
                     <input type="number" name="max_price" value="{{ request('max_price') }}"
-                           placeholder="Max" class="w-full pl-6 pr-2 py-2 text-sm border border-neutral-200 rounded-lg focus:outline-none focus:border-[#6F9CA2] bg-neutral-50">
+                           placeholder="Max" class="w-full pl-6 pr-2 py-2 text-sm border border-neutral-200 rounded-lg focus:outline-none focus:border-[#c9a227] bg-neutral-50">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     <label class="flex items-center gap-2.5 cursor-pointer group py-0.5">
                         <input type="radio" name="rating" value="{{ $i }}"
                                {{ request('rating') == $i ? 'checked' : '' }}
-                               class="w-3.5 h-3.5 border-neutral-300 text-[#6F9CA2] focus:ring-[#6F9CA2] focus:ring-offset-0">
+                               class="w-3.5 h-3.5 border-neutral-300 text-[#c9a227] focus:ring-[#c9a227] focus:ring-offset-0">
                         <span class="flex items-center gap-0.5">
                             @for($j = 1; $j <= 5; $j++)
                                 <svg class="w-3.5 h-3.5 {{ $j <= $i ? 'text-amber-400' : 'text-neutral-200' }}" fill="currentColor" viewBox="0 0 20 20">
@@ -124,13 +124,13 @@
                 <label class="flex items-center gap-2.5 cursor-pointer group py-0.5">
                     <input type="checkbox" name="in_stock" value="1"
                            {{ request('in_stock') ? 'checked' : '' }}
-                           class="w-3.5 h-3.5 rounded border-neutral-300 text-[#6F9CA2] focus:ring-[#6F9CA2] focus:ring-offset-0">
+                           class="w-3.5 h-3.5 rounded border-neutral-300 text-[#c9a227] focus:ring-[#c9a227] focus:ring-offset-0">
                     <span class="text-sm text-neutral-600 group-hover:text-neutral-900 transition-colors">In Stock Only</span>
                 </label>
                 <label class="flex items-center gap-2.5 cursor-pointer group py-0.5">
                     <input type="checkbox" name="on_sale" value="1"
                            {{ request('on_sale') ? 'checked' : '' }}
-                           class="w-3.5 h-3.5 rounded border-neutral-300 text-[#6F9CA2] focus:ring-[#6F9CA2] focus:ring-offset-0">
+                           class="w-3.5 h-3.5 rounded border-neutral-300 text-[#c9a227] focus:ring-[#c9a227] focus:ring-offset-0">
                     <span class="text-sm text-neutral-600 group-hover:text-neutral-900 transition-colors">On Sale</span>
                 </label>
             </div>
@@ -139,7 +139,7 @@
 
     {{-- Action Buttons --}}
     <div class="flex gap-2 pt-2">
-        <button type="submit" class="flex-1 py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold rounded-lg transition-colors">
+        <button type="submit" class="flex-1 py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold rounded-lg transition-colors">
             Apply
         </button>
         <a href="{{ route('products.index') }}" class="flex-1 py-2.5 text-center text-sm font-medium text-neutral-600 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors">

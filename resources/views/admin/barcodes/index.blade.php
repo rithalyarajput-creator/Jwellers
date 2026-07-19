@@ -5,7 +5,7 @@
         <div class="page-header">
             <h1>Barcode Master</h1>
             <div style="display:flex; gap:.5rem; align-items:center; flex-wrap:wrap;">
-                <a href="{{ route('admin.barcodes.labels', ['format' => 'thermal']) }}" target="_blank" class="btn btn-primary" style="font-size:13px;" title="50×20mm per label, 1-up — matches Foreverkids paper roll (Packing 2000)">Print Thermal (50×20mm)</a>
+                <a href="{{ route('admin.barcodes.labels', ['format' => 'thermal']) }}" target="_blank" class="btn btn-primary" style="font-size:13px;" title="50×20mm per label, 1-up — matches Jwellers paper roll (Packing 2000)">Print Thermal (50×20mm)</a>
 
                 <div style="display:flex; align-items:center; gap:.35rem; padding:.25rem .4rem; background:#f9fafb; border:1px solid #e5e7eb; border-radius:6px;">
                     <label for="sheetFormat" style="font-size:12px; color:#6b7280; font-weight:600;">Other format:</label>

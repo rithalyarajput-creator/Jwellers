@@ -24,7 +24,7 @@
                        :placeholder="currentPlaceholder"
                        aria-label="Search products"
                        role="searchbox"
-                       class="w-full pl-10 pr-20 py-3 text-sm bg-white border border-neutral-200 rounded-lg focus:outline-none focus:border-[#6F9CA2] focus:ring-1 focus:ring-[#6F9CA2]"
+                       class="w-full pl-10 pr-20 py-3 text-sm bg-white border border-neutral-200 rounded-lg focus:outline-none focus:border-[#c9a227] focus:ring-1 focus:ring-[#c9a227]"
                        autocomplete="off"
                        autofocus>
 
@@ -33,7 +33,7 @@
                         type="button"
                         @click.prevent="toggleMic()"
                         class="absolute right-12 p-1.5 transition-colors z-10"
-                        :class="listening ? 'text-red-500 animate-pulse' : 'text-neutral-600 hover:text-[#6F9CA2]'"
+                        :class="listening ? 'text-red-500 animate-pulse' : 'text-neutral-600 hover:text-[#c9a227]'"
                         :title="listening ? 'Stop listening' : 'Voice search'"
                         aria-label="Voice search">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@
                 </button>
 
                 {{-- Submit button --}}
-                <button type="submit" class="absolute right-3 p-1.5 text-neutral-600 hover:text-[#6F9CA2] transition-colors" aria-label="Search">
+                <button type="submit" class="absolute right-3 p-1.5 text-neutral-600 hover:text-[#c9a227] transition-colors" aria-label="Search">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>

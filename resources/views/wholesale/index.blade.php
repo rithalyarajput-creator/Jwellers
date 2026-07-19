@@ -2,7 +2,7 @@
     <x-slot name="title">Wholesale - {{ config('app.name') }}</x-slot>
 
     <!-- Hero Banner -->
-    <div style="background: linear-gradient(135deg, #6F9CA2 0%, #4A7A80 100%); color: #fff; padding: 4rem 1rem; text-align: center;">
+    <div style="background: linear-gradient(135deg, #c9a227 0%, #86681c 100%); color: #fff; padding: 4rem 1rem; text-align: center;">
         <div class="container mx-auto px-4" style="max-width: 640px;">
             <h1 style="font-size: 2rem; font-weight: 700; margin: 0 0 0.75rem;">Wholesale Program</h1>
             <p style="font-size: 1rem; opacity: 0.9; margin: 0 0 1.5rem; line-height: 1.6;">
@@ -10,7 +10,7 @@
                 Minimum order quantities apply.
             </p>
             <a href="#wholesale-form"
-               style="display: inline-block; background: #fff; color: #4A7A80; font-weight: 600; font-size: 14px; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none;">
+               style="display: inline-block; background: #fff; color: #86681c; font-weight: 600; font-size: 14px; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none;">
                 Enquire Now
             </a>
         </div>
@@ -30,8 +30,8 @@
             @endphp
             @foreach($benefits as $benefit)
                 <div style="background: #fff; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 1.5rem; text-align: center;">
-                    <div style="width: 48px; height: 48px; background: #f0f7f8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
-                        <svg style="width: 24px; height: 24px; color: #6F9CA2;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div style="width: 48px; height: 48px; background: #fbf7ef; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+                        <svg style="width: 24px; height: 24px; color: #c9a227;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ $benefit['icon'] }}"/>
                         </svg>
                     </div>
@@ -89,8 +89,8 @@
                 </div>
 
                 <button type="submit"
-                        style="padding: 0.75rem; background: #6F9CA2; color: #fff; border: none; border-radius: 0.5rem; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s;"
-                        onmouseenter="this.style.background='#4A7A80'" onmouseleave="this.style.background='#6F9CA2'">
+                        style="padding: 0.75rem; background: #c9a227; color: #fff; border: none; border-radius: 0.5rem; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s;"
+                        onmouseenter="this.style.background='#86681c'" onmouseleave="this.style.background='#c9a227'">
                     Submit Enquiry
                 </button>
             </form>

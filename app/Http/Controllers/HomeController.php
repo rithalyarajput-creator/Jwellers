@@ -87,10 +87,10 @@ class HomeController extends Controller
 
         // Site settings
         $siteSettings = [
-            'site_name' => Setting::get('site_name', 'ForeverKids'),
-            'site_tagline' => Setting::get('site_tagline', 'Adorable Clothing for Little Ones'),
+            'site_name' => Setting::get('site_name', 'Jwellers'),
+            'site_tagline' => Setting::get('site_tagline', 'Timeless Elegance in Every Piece'),
             'site_logo' => Setting::get('site_logo', ''),
-            'footer_about' => Setting::get('footer_about', 'Adorable, comfortable, and stylish clothing for your little ones. Discover the perfect outfits for every occasion with ForeverKids.'),
+            'footer_about' => Setting::get('footer_about', 'Elegant, handcrafted, and timeless jewellery for every occasion. Discover the perfect piece for every moment with Jwellers.'),
         ];
 
         return view('home', compact(

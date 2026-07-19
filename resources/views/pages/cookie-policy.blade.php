@@ -67,7 +67,7 @@
                 <div class="bg-white border border-neutral-100 rounded-xl p-5 sm:p-6">
                     <div class="flex items-center justify-between mb-3">
                         <h2 class="text-[15px] font-bold text-neutral-900">Functional Cookies</h2>
-                        <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#6F9CA2]/10 text-[#5B878D]">Optional</span>
+                        <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#c9a227]/10 text-[#a9851f]">Optional</span>
                     </div>
                     <p class="text-[13px] text-neutral-600 mb-3">Enhance your experience by remembering preferences and settings.</p>
                     <ul class="space-y-1.5">
@@ -88,7 +88,7 @@
                 <div class="bg-white border border-neutral-100 rounded-xl p-5 sm:p-6">
                     <div class="flex items-center justify-between mb-3">
                         <h2 class="text-[15px] font-bold text-neutral-900">Analytics Cookies</h2>
-                        <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#6F9CA2]/10 text-[#5B878D]">Optional</span>
+                        <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#c9a227]/10 text-[#a9851f]">Optional</span>
                     </div>
                     <p class="text-[13px] text-neutral-600 mb-3">Help us understand how visitors use our website so we can improve it.</p>
                     <ul class="space-y-1.5">

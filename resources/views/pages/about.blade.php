@@ -2,15 +2,15 @@
     <x-slot name="title">About Us - {{ config('app.name') }}</x-slot>
 
     @push('meta')
-        <meta name="description" content="Learn about {{ config('app.name') }} - your trusted online store for kids' clothing, dresses, and accessories. Quality fashion for boys and girls.">
+        <meta name="description" content="Learn about {{ config('app.name') }} - your trusted online store for fine gold, diamond, and silver jewellery. Timeless elegance for every occasion.">
         <link rel="canonical" href="{{ url('/about') }}">
         <meta property="og:title" content="About Us - {{ config('app.name') }}">
-        <meta property="og:description" content="Learn about {{ config('app.name') }} - your trusted online store for kids' clothing, dresses, and accessories.">
+        <meta property="og:description" content="Learn about {{ config('app.name') }} - your trusted online store for fine gold, diamond, and silver jewellery.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url('/about') }}">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="About Us - {{ config('app.name') }}">
-        <meta name="twitter:description" content="Learn about {{ config('app.name') }} - your trusted online store for kids' clothing, dresses, and accessories.">
+        <meta name="twitter:description" content="Learn about {{ config('app.name') }} - your trusted online store for fine gold, diamond, and silver jewellery.">
     @endpush
 
     <!-- Breadcrumb -->
@@ -30,25 +30,25 @@
                 <!-- Image side -->
                 <div class="relative" style="padding: 50px;">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=800&q=80" alt="Kids Clothing" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80" alt="Fine Jewellery" class="w-full h-full object-cover">
                     </div>
                 </div>
 
                 <!-- Content side -->
                 <div>
-                    <span class="inline-block text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider mb-3">Our Story</span>
+                    <span class="inline-block text-xs font-semibold text-[#c9a227] uppercase tracking-wider mb-3">Our Story</span>
                     <h2 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-5 leading-snug">
-                        Bringing the Best Kids' Fashion to Your Doorstep
+                        Bringing Timeless Jewellery to Your Doorstep
                     </h2>
                     <div class="space-y-4 text-[13px] sm:text-sm text-neutral-600 leading-relaxed">
                         <p>
-                            Founded with a passion for kids' fashion and quality, ForeverKids started with a simple mission — to make adorable, comfortable, and stylish clothing accessible to every family.
+                            Founded with a passion for fine craftsmanship and quality, Jwellers started with a simple mission — to make exquisite, elegant, and timeless jewellery accessible to everyone.
                         </p>
                         <p>
-                            Today, we've grown into a trusted destination for thousands of parents. We partner directly with brands and manufacturers to ensure every piece on our platform meets the highest quality and safety standards.
+                            Today, we've grown into a trusted destination for thousands of customers. We partner directly with skilled artisans and certified suppliers to ensure every piece on our platform meets the highest quality and hallmark standards.
                         </p>
                         <p>
-                            From everyday essentials to special occasion outfits, our curated collection spans over 200 brands and thousands of styles — all delivered with care, competitive pricing, and a satisfaction guarantee.
+                            From everyday elegance to special occasion statement pieces, our curated collection spans gold, diamond, and silver designs — all delivered with care, competitive pricing, and a satisfaction guarantee.
                         </p>
                     </div>
                 </div>
@@ -63,20 +63,20 @@
     <section class="py-12 sm:py-16 bg-neutral-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8 sm:mb-10">
-                <span class="inline-block text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider mb-2">Why Choose Us</span>
+                <span class="inline-block text-xs font-semibold text-[#c9a227] uppercase tracking-wider mb-2">Why Choose Us</span>
                 <h2 class="text-xl sm:text-2xl font-bold text-neutral-900">What Sets Us Apart</h2>
-                <p class="text-[13px] text-neutral-600 mt-2 max-w-md mx-auto">We go the extra mile to make shopping for your little ones a joyful experience.</p>
+                <p class="text-[13px] text-neutral-600 mt-2 max-w-md mx-auto">We go the extra mile to make shopping for fine jewellery a joyful experience.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
                 <!-- Authenticity -->
-                <div class="bg-white border border-neutral-100 rounded-xl p-5 hover:border-[#6F9CA2]/30 hover:shadow-sm transition-all group">
-                    <div class="w-10 h-10 bg-[#6F9CA2]/5 rounded-lg flex items-center justify-center mb-3">
-                        <svg class="w-5 h-5 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white border border-neutral-100 rounded-xl p-5 hover:border-[#c9a227]/30 hover:shadow-sm transition-all group">
+                    <div class="w-10 h-10 bg-[#c9a227]/5 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
                         </svg>
                     </div>
-                    <h3 class="text-sm font-semibold text-neutral-900 mb-1 group-hover:text-[#6F9CA2] transition-colors">100% Authentic</h3>
+                    <h3 class="text-sm font-semibold text-neutral-900 mb-1 group-hover:text-[#c9a227] transition-colors">100% Authentic</h3>
                     <p class="text-xs text-neutral-600 leading-relaxed">Every product is sourced from authorized distributors and verified for authenticity.</p>
                 </div>
 
@@ -122,7 +122,7 @@
     <section class="py-12 sm:py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8 sm:mb-10">
-                <span class="inline-block text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider mb-2">Testimonials</span>
+                <span class="inline-block text-xs font-semibold text-[#c9a227] uppercase tracking-wider mb-2">Testimonials</span>
                 <h2 class="text-xl sm:text-2xl font-bold text-neutral-900">What Our Customers Say</h2>
                 <p class="text-[13px] text-neutral-600 mt-2">Real reviews from real parents who trust us.</p>
             </div>
@@ -139,11 +139,11 @@
                         @endfor
                     </div>
                     <p class="text-[13px] text-neutral-600 leading-relaxed mb-4">
-                        "Absolutely love shopping here! The clothes are always top quality, packaging is excellent, and delivery is super fast. My go-to store for all my kids' clothing needs."
+                        "Absolutely love shopping here! The pieces are always top quality, packaging is excellent, and delivery is super fast. My go-to store for all my jewellery needs."
                     </p>
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-full bg-[#6F9CA2]/10 flex items-center justify-center">
-                            <span class="text-sm font-semibold text-[#6F9CA2]">P</span>
+                        <div class="w-9 h-9 rounded-full bg-[#c9a227]/10 flex items-center justify-center">
+                            <span class="text-sm font-semibold text-[#c9a227]">P</span>
                         </div>
                         <div>
                             <div class="text-sm font-semibold text-neutral-900">Priya S.</div>
@@ -162,7 +162,7 @@
                         @endfor
                     </div>
                     <p class="text-[13px] text-neutral-600 leading-relaxed mb-4">
-                        "Best prices I've found for quality kids' outfits. I've been ordering for 6 months now and never been disappointed. The fabrics are soft, sizes are accurate, and customer service is outstanding!"
+                        "Best prices I've found for quality jewellery. I've been ordering for 6 months now and never been disappointed. The finish is beautiful, hallmarks are genuine, and customer service is outstanding!"
                     </p>
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-full bg-info-100 flex items-center justify-center">
@@ -185,7 +185,7 @@
                         @endfor
                     </div>
                     <p class="text-[13px] text-neutral-600 leading-relaxed mb-4">
-                        "I was skeptical at first, but ForeverKids exceeded my expectations. The packaging was secure, quality was amazing, and arrived within 3 days. My kids love their new outfits!"
+                        "I was skeptical at first, but Jwellers exceeded my expectations. The packaging was secure, quality was amazing, and arrived within 3 days. I absolutely love my new necklace!"
                     </p>
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-full bg-success-100 flex items-center justify-center">
@@ -207,16 +207,16 @@
          ============================================ -->
     <section class="py-12 sm:py-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center bg-gradient-to-br from-[#F8931D] via-[#F8931D] to-[#D47200] rounded-2xl p-8 sm:p-12 relative overflow-hidden">
+            <div class="max-w-3xl mx-auto text-center bg-gradient-to-br from-[#7a1f2b] via-[#7a1f2b] to-[#D47200] rounded-2xl p-8 sm:p-12 relative overflow-hidden">
                 <!-- Decorative circles -->
                 <div class="absolute -top-12 -right-12 w-40 h-40 bg-white/5 rounded-full"></div>
                 <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full"></div>
 
                 <div class="relative z-10">
-                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-3">Ready to Find the Perfect Outfit for Your Little One?</h2>
-                    <p class="text-sm text-white mb-6 max-w-md mx-auto">Browse our curated collection of adorable kids' clothing and enjoy free shipping on your first order.</p>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-3">Ready to Find Your Perfect Piece?</h2>
+                    <p class="text-sm text-white mb-6 max-w-md mx-auto">Browse our curated collection of fine jewellery and enjoy free shipping on your first order.</p>
                     <div class="flex flex-wrap items-center justify-center gap-3">
-                        <a href="{{ route('categories.index') }}" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#5B878D] text-sm font-semibold rounded-lg hover:bg-[#6F9CA2]/5 transition-colors shadow-lg">
+                        <a href="{{ route('categories.index') }}" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#a9851f] text-sm font-semibold rounded-lg hover:bg-[#c9a227]/5 transition-colors shadow-lg">
                             Shop Now
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

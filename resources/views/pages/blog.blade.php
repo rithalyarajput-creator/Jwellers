@@ -2,15 +2,15 @@
     <x-slot name="title">Blog - {{ config('app.name') }}</x-slot>
 
     @push('meta')
-        <meta name="description" content="Read the latest articles, tips, and guides about kids' fashion, parenting, and style at {{ config('app.name') }} blog.">
+        <meta name="description" content="Read the latest articles, tips, and guides about fine jewellery, styling tips, and trends at {{ config('app.name') }} blog.">
         <link rel="canonical" href="{{ url('/blog') }}">
         <meta property="og:title" content="Blog - {{ config('app.name') }}">
-        <meta property="og:description" content="Read the latest articles, tips, and guides about kids' fashion, parenting, and style at {{ config('app.name') }}.">
+        <meta property="og:description" content="Read the latest articles, tips, and guides about fine jewellery, styling tips, and trends at {{ config('app.name') }}.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url('/blog') }}">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Blog - {{ config('app.name') }}">
-        <meta name="twitter:description" content="Latest articles about kids' fashion, parenting, and style at {{ config('app.name') }}.">
+        <meta name="twitter:description" content="Latest articles about fine jewellery, styling tips, and trends at {{ config('app.name') }}.">
     @endpush
 
     {{-- Breadcrumb --}}
@@ -30,7 +30,7 @@
                 </svg>
             </div>
             <h1 class="text-xl sm:text-2xl font-bold text-neutral-900">Our Blog</h1>
-            <p class="text-[13px] text-neutral-600 mt-2 max-w-md mx-auto">Parenting tips, kids' fashion guides, and the latest trends — straight from our experts.</p>
+            <p class="text-[13px] text-neutral-600 mt-2 max-w-md mx-auto">Styling tips, jewellery care guides, and the latest trends — straight from our experts.</p>
         </div>
 
         {{-- Search & Filters --}}

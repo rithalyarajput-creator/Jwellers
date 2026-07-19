@@ -24,7 +24,7 @@
             to   { opacity: 0; transform: translateY(-12px); }
         }
         @media (max-width: 1023px) {
-            body { background: linear-gradient(180deg, #ffffff 0%, #f0f7f8 50%, #d9ecee 100%); }
+            body { background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 50%, #f5ecd6 100%); }
         }
     </style>
 </head>
@@ -50,7 +50,7 @@
 
             <div class="w-full max-w-md mx-auto">
                 <!-- Back to home link -->
-                <a href="{{ url('/') }}" class="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-[#3A6166] transition-colors group mb-6 mt-2">
+                <a href="{{ url('/') }}" class="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-[#6b531d] transition-colors group mb-6 mt-2">
                     <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                     </svg>
@@ -83,7 +83,7 @@
                         <!-- Welcome Text -->
                         <div class="mb-5">
                             <h1 class="text-2xl font-bold text-neutral-900 mb-1">Welcome Back</h1>
-                            <p class="text-neutral-600 text-sm">Sign in to access your kids' fashion collection</p>
+                            <p class="text-neutral-600 text-sm">Sign in to access your jewellery collection</p>
                         </div>
 
                         <form method="POST" action="{{ route('login') }}" class="space-y-4">
@@ -99,7 +99,7 @@
                                         </svg>
                                     </div>
                                     <input type="email" name="email" id="login_email" value="{{ old('_register') ? '' : old('email') }}" required
-                                           class="w-full pl-12 pr-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all @error('email') border-red-300 bg-red-50 @enderror"
+                                           class="w-full pl-12 pr-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all @error('email') border-red-300 bg-red-50 @enderror"
                                            placeholder="you@example.com">
                                 </div>
                                 @if(!old('_register'))
@@ -116,7 +116,7 @@
                             <div>
                                 <div class="flex items-center justify-between mb-1">
                                     <label for="login_password" class="block text-sm font-medium text-neutral-700">Password</label>
-                                    <a href="{{ route('password.request') }}" class="text-sm text-[#3A6166] hover:text-[#2A494D] font-medium transition-colors">
+                                    <a href="{{ route('password.request') }}" class="text-sm text-[#6b531d] hover:text-[#2A494D] font-medium transition-colors">
                                         Forgot password?
                                     </a>
                                 </div>
@@ -127,7 +127,7 @@
                                         </svg>
                                     </div>
                                     <input :type="show ? 'text' : 'password'" name="password" id="login_password" required
-                                           class="w-full pl-12 pr-12 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all @error('password') border-red-300 bg-red-50 @enderror"
+                                           class="w-full pl-12 pr-12 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all @error('password') border-red-300 bg-red-50 @enderror"
                                            placeholder="Enter your password">
                                     <button type="button" @click="show = !show" class="absolute inset-y-0 right-0 pr-4 flex items-center text-neutral-600 hover:text-neutral-600 transition-colors">
                                         <svg x-show="!show" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,7 +153,7 @@
                             <div class="flex items-center">
                                 <label class="relative flex items-center cursor-pointer">
                                     <input type="checkbox" name="remember" id="remember" class="peer sr-only" {{ old('remember') ? 'checked' : '' }}>
-                                    <div class="w-5 h-5 border-2 border-neutral-500 rounded-md peer-checked:bg-[#F8931D] peer-checked:border-[#3A6166] transition-all flex items-center justify-center">
+                                    <div class="w-5 h-5 border-2 border-neutral-500 rounded-md peer-checked:bg-[#7a1f2b] peer-checked:border-[#6b531d] transition-all flex items-center justify-center">
                                         <svg class="w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                                         </svg>
@@ -164,7 +164,7 @@
 
                             <!-- Submit -->
                             <button type="submit"
-                                    class="w-full py-3 px-6 bg-gradient-to-r from-[#F8931D] via-[#F8931D] to-[#E07E0A] hover:from-[#E07E0A] hover:via-[#E07E0A] hover:to-[#D47200] text-white font-semibold rounded-xl shadow-lg shadow-[#F8931D]/25 hover:shadow-[#F8931D]/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/50 focus:ring-offset-2">
+                                    class="w-full py-3 px-6 bg-gradient-to-r from-[#7a1f2b] via-[#7a1f2b] to-[#5f1721] hover:from-[#5f1721] hover:via-[#5f1721] hover:to-[#D47200] text-white font-semibold rounded-xl shadow-lg shadow-[#7a1f2b]/25 hover:shadow-[#7a1f2b]/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/50 focus:ring-offset-2">
                                 Sign In
                             </button>
                         </form>
@@ -172,7 +172,7 @@
                         <!-- Switch to Register -->
                         <p class="mt-5 text-center text-sm text-neutral-600">
                             New to {{ config('app.name') }}?
-                            <button @click="switchTo('register')" class="font-semibold text-[#3A6166] hover:text-[#2A494D] transition-colors">
+                            <button @click="switchTo('register')" class="font-semibold text-[#6b531d] hover:text-[#2A494D] transition-colors">
                                 Create an account
                             </button>
                         </p>
@@ -197,7 +197,7 @@
                             <div>
                                 <label for="full_name" class="block text-sm font-medium text-neutral-700 mb-1.5">Full Name</label>
                                 <input type="text" name="full_name" id="full_name" value="{{ old('full_name') }}" required
-                                       class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all @error('full_name') border-red-300 bg-red-50 @enderror"
+                                       class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all @error('full_name') border-red-300 bg-red-50 @enderror"
                                        placeholder="Enter your full name">
                                 @error('full_name')
                                     <p class="mt-1.5 text-xs text-red-600">{{ $message }}</p>
@@ -209,7 +209,7 @@
                                 <div>
                                     <label for="reg_email" class="block text-sm font-medium text-neutral-700 mb-1.5">Email Address</label>
                                     <input type="email" name="email" id="reg_email" value="{{ old('_register') ? old('email') : '' }}" required
-                                           class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all @if(old('_register')) @error('email') border-red-300 bg-red-50 @enderror @endif"
+                                           class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all @if(old('_register')) @error('email') border-red-300 bg-red-50 @enderror @endif"
                                            placeholder="you@example.com">
                                     @if(old('_register'))
                                         @error('email')
@@ -222,7 +222,7 @@
                                         Phone <span class="text-neutral-600 font-normal">(optional)</span>
                                     </label>
                                     <input type="tel" name="phone" id="phone" value="{{ old('phone') }}"
-                                           class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all @error('phone') border-red-300 bg-red-50 @enderror"
+                                           class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all @error('phone') border-red-300 bg-red-50 @enderror"
                                            placeholder="+91 98765 43210">
                                     @error('phone')
                                         <p class="mt-1.5 text-xs text-red-600">{{ $message }}</p>
@@ -236,7 +236,7 @@
                                     <label for="reg_password" class="block text-sm font-medium text-neutral-700 mb-1.5">Password</label>
                                     <div class="relative" x-data="{ show: false }">
                                         <input :type="show ? 'text' : 'password'" name="password" id="reg_password" required
-                                               class="w-full px-4 pr-11 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all @if(old('_register')) @error('password') border-red-300 bg-red-50 @enderror @endif"
+                                               class="w-full px-4 pr-11 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all @if(old('_register')) @error('password') border-red-300 bg-red-50 @enderror @endif"
                                                placeholder="Min 8 characters">
                                         <button type="button" @click="show = !show" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-neutral-600 hover:text-neutral-600 transition-colors">
                                             <svg x-show="!show" class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -257,7 +257,7 @@
                                 <div>
                                     <label for="password_confirmation" class="block text-sm font-medium text-neutral-700 mb-1.5">Confirm Password</label>
                                     <input type="password" name="password_confirmation" id="password_confirmation" required
-                                           class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/40 focus:border-[#3A6166] transition-all"
+                                           class="w-full px-4 py-2.5 bg-neutral-50 border border-neutral-400 rounded-xl text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/40 focus:border-[#6b531d] transition-all"
                                            placeholder="Repeat password">
                                 </div>
                             </div>
@@ -266,23 +266,23 @@
                             <div class="flex items-start pt-1">
                                 <label class="relative flex items-start cursor-pointer">
                                     <input type="checkbox" name="terms" id="terms" required class="peer sr-only">
-                                    <div class="w-4.5 h-4.5 mt-0.5 border-2 border-neutral-500 rounded peer-checked:bg-[#F8931D] peer-checked:border-[#3A6166] transition-all flex items-center justify-center shrink-0">
+                                    <div class="w-4.5 h-4.5 mt-0.5 border-2 border-neutral-500 rounded peer-checked:bg-[#7a1f2b] peer-checked:border-[#6b531d] transition-all flex items-center justify-center shrink-0">
                                         <svg class="w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                                         </svg>
                                     </div>
                                     <span class="ml-2.5 text-[13px] text-neutral-600 leading-snug">
                                         I agree to the
-                                        <a href="{{ route('terms') }}" class="text-[#3A6166] hover:text-[#2A494D] font-medium">Terms</a>
+                                        <a href="{{ route('terms') }}" class="text-[#6b531d] hover:text-[#2A494D] font-medium">Terms</a>
                                         and
-                                        <a href="{{ route('privacy') }}" class="text-[#3A6166] hover:text-[#2A494D] font-medium">Privacy Policy</a>
+                                        <a href="{{ route('privacy') }}" class="text-[#6b531d] hover:text-[#2A494D] font-medium">Privacy Policy</a>
                                     </span>
                                 </label>
                             </div>
 
                             <!-- Submit -->
                             <button type="submit"
-                                    class="w-full py-3 px-6 bg-gradient-to-r from-[#F8931D] via-[#F8931D] to-[#E07E0A] hover:from-[#E07E0A] hover:via-[#E07E0A] hover:to-[#D47200] text-white font-semibold rounded-xl shadow-lg shadow-[#F8931D]/25 hover:shadow-[#F8931D]/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#3A6166]/50 focus:ring-offset-2">
+                                    class="w-full py-3 px-6 bg-gradient-to-r from-[#7a1f2b] via-[#7a1f2b] to-[#5f1721] hover:from-[#5f1721] hover:via-[#5f1721] hover:to-[#D47200] text-white font-semibold rounded-xl shadow-lg shadow-[#7a1f2b]/25 hover:shadow-[#7a1f2b]/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#6b531d]/50 focus:ring-offset-2">
                                 Create Account
                             </button>
                         </form>
@@ -290,7 +290,7 @@
                         <!-- Switch to Login -->
                         <p class="mt-6 text-center text-sm text-neutral-600">
                             Already have an account?
-                            <button @click="switchTo('login')" class="font-semibold text-[#3A6166] hover:text-[#2A494D] transition-colors">
+                            <button @click="switchTo('login')" class="font-semibold text-[#6b531d] hover:text-[#2A494D] transition-colors">
                                 Sign in
                             </button>
                         </p>
@@ -302,9 +302,9 @@
                 <div class="mt-6 pt-4 border-t border-neutral-100 text-center">
                     <p class="text-xs text-neutral-600">
                         By continuing, you agree to our
-                        <a href="{{ route('terms') }}" class="text-neutral-600 hover:text-[#3A6166] underline transition-colors">Terms</a>
+                        <a href="{{ route('terms') }}" class="text-neutral-600 hover:text-[#6b531d] underline transition-colors">Terms</a>
                         &
-                        <a href="{{ route('privacy') }}" class="text-neutral-600 hover:text-[#3A6166] underline transition-colors">Privacy Policy</a>
+                        <a href="{{ route('privacy') }}" class="text-neutral-600 hover:text-[#6b531d] underline transition-colors">Privacy Policy</a>
                     </p>
                 </div>
             </div>
@@ -318,21 +318,21 @@
                 current: 0,
                 slides: [
                     {
-                        bg: 'linear-gradient(135deg, #1A3133 0%, #2A494D 40%, #4A7A80 100%)',
-                        tagline: 'Little Styles, Big Smiles',
-                        subtitle: 'Discover adorable outfits that let your kids express themselves with comfort and joy',
+                        bg: 'linear-gradient(135deg, #1A3133 0%, #2A494D 40%, #86681c 100%)',
+                        tagline: 'Timeless Elegance, Every Day',
+                        subtitle: 'Discover exquisite pieces that let you express your style with grace and confidence',
                         icon: 'sparkles'
                     },
                     {
-                        bg: 'linear-gradient(135deg, #2A494D 0%, #3A6166 40%, #6F9CA2 100%)',
-                        tagline: 'Premium Kids Collection',
-                        subtitle: 'Explore our curated range of trendy and comfortable clothing designed for growing kids',
+                        bg: 'linear-gradient(135deg, #2A494D 0%, #6b531d 40%, #c9a227 100%)',
+                        tagline: 'Premium Jewellery Collection',
+                        subtitle: 'Explore our curated range of handcrafted necklaces, earrings, rings, and more',
                         icon: 'gem'
                     },
                     {
-                        bg: 'linear-gradient(135deg, #1A3133 0%, #3A6166 40%, #5B878D 100%)',
-                        tagline: 'Fashion for Every Adventure',
-                        subtitle: 'From playtime to party time, dress your little ones in style with our vibrant collection',
+                        bg: 'linear-gradient(135deg, #1A3133 0%, #6b531d 40%, #a9851f 100%)',
+                        tagline: 'Jewellery for Every Occasion',
+                        subtitle: 'From everyday elegance to bridal splendour, adorn every moment with our stunning collection',
                         icon: 'palette'
                     }
                 ],

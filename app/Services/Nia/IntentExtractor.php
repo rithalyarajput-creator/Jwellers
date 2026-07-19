@@ -35,22 +35,22 @@ class IntentExtractor
     private function callHaiku(string $apiKey, string $message): IntentDTO
     {
         $system = <<<'SYS'
-You classify a customer's Instagram/Facebook/WhatsApp DM to ForeverKids (premium kids' clothing store).
+You classify a customer's Instagram/Facebook/WhatsApp DM to Jwellers (premium jewellery store).
 
 Return ONLY valid JSON matching:
 {"intent": "browse|sizing|price|order_status|returns|human|small_talk|other",
- "filters": {"age_band": "0-3m|3-12m|1-3y|3-6y|6-10y|10-15y|null",
-             "gender": "girl|boy|unisex|null",
-             "occasion": "party|casual|wedding|festive|school|null",
+ "filters": {"age_band": "gold|silver|diamond|platinum|null",
+             "gender": "women|men|unisex|null",
+             "occasion": "party|casual|wedding|festive|bridal|null",
              "color": "string|null",
              "max_price": number_or_null,
-             "category_keywords": ["frock","tshirt","etc"]},
+             "category_keywords": ["necklace","earrings","ring","bangle","mangalsutra","pendant","chain"]},
  "ask_for_more": true_if_message_is_too_vague_to_search,
  "confidence": 0.0_to_1.0}
 
 Rules:
 - "browse" = wants to see products
-- "sizing" = asking about size charts or fit
+- "sizing" = asking about ring sizes, chain lengths, or fit
 - "price" = asking how much something costs
 - "order_status" = asking about an existing order
 - "returns" = exchange / refund / return

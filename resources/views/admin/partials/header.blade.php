@@ -75,7 +75,7 @@
                 <div class="px-4 py-3 flex items-center justify-between" style="border-bottom: 1px solid #e3e3e3;">
                     <h3 class="text-sm font-semibold" style="color: #303030;">Notifications</h3>
                     @if($unreadCount > 0)
-                        <span class="text-xs font-medium" style="color: #6F9CA2;">{{ $unreadCount }} new</span>
+                        <span class="text-xs font-medium" style="color: #c9a227;">{{ $unreadCount }} new</span>
                     @endif
                 </div>
                 <div class="max-h-96 overflow-y-auto">
@@ -85,7 +85,7 @@
                             <div class="flex items-start gap-3">
                                 <div style="width: 2rem; height: 2rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; {{ $notification->type === 'new_enquiry' ? 'background:#e8f5f5;' : ($notification->type === 'new_ticket' ? 'background:#f3e8ff;' : 'background:#f5f5f5;') }}">
                                     @if($notification->type === 'new_enquiry')
-                                        <svg style="width: 1rem; height: 1rem; color: #6F9CA2;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg style="width: 1rem; height: 1rem; color: #c9a227;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                         </svg>
                                     @elseif($notification->type === 'new_ticket')
@@ -112,7 +112,7 @@
                     @endforelse
                 </div>
                 <div class="px-4 py-3" style="border-top: 1px solid #e3e3e3;">
-                    <a href="{{ route('admin.notifications') }}" class="text-sm font-medium" style="color: #6F9CA2;">
+                    <a href="{{ route('admin.notifications') }}" class="text-sm font-medium" style="color: #c9a227;">
                         View all notifications
                     </a>
                 </div>

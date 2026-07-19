@@ -2,7 +2,7 @@
     <x-slot name="title">Shipping Information - {{ config('app.name') }}</x-slot>
 
     @push('meta')
-        <meta name="description" content="Shipping information for {{ config('app.name') }}. Learn about delivery times, shipping costs, and tracking your kids' clothing orders.">
+        <meta name="description" content="Shipping information for {{ config('app.name') }}. Learn about delivery times, shipping costs, and tracking your jewellery orders.">
         <link rel="canonical" href="{{ url('/shipping') }}">
     @endpush
 
@@ -18,8 +18,8 @@
 
             <!-- Header -->
             <div class="text-center mb-8 sm:mb-10">
-                <div class="w-14 h-14 mx-auto rounded-full bg-[#6F9CA2]/5 flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-14 h-14 mx-auto rounded-full bg-[#c9a227]/5 flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
                     </svg>
                 </div>
@@ -29,19 +29,19 @@
 
             <!-- Delivery Options Cards -->
             <div class="mb-8">
-                <p class="text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider pb-3">Delivery Options</p>
+                <p class="text-xs font-semibold text-[#c9a227] uppercase tracking-wider pb-3">Delivery Options</p>
                 <div class="grid sm:grid-cols-2 gap-3">
                     <div class="bg-white border border-neutral-100 rounded-xl p-4">
                         <div class="flex items-start gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-[#6F9CA2]/5 flex items-center justify-center shrink-0">
-                                <svg class="w-4.5 h-4.5 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-9 h-9 rounded-lg bg-[#c9a227]/5 flex items-center justify-center shrink-0">
+                                <svg class="w-4.5 h-4.5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                                 </svg>
                             </div>
                             <div>
                                 <h3 class="text-sm font-semibold text-neutral-900">Standard Delivery</h3>
                                 <p class="text-xs text-neutral-600 mt-0.5">5-7 business days</p>
-                                <p class="text-sm font-bold text-[#6F9CA2] mt-1.5">FREE on orders above ₹499</p>
+                                <p class="text-sm font-bold text-[#c9a227] mt-1.5">FREE on orders above ₹499</p>
                                 <p class="text-[11px] text-neutral-600 mt-0.5">₹49 for orders below ₹499</p>
                             </div>
                         </div>
@@ -49,8 +49,8 @@
 
                     <div class="bg-white border border-neutral-100 rounded-xl p-4">
                         <div class="flex items-start gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-[#6F9CA2]/5 flex items-center justify-center shrink-0">
-                                <svg class="w-4.5 h-4.5 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-9 h-9 rounded-lg bg-[#c9a227]/5 flex items-center justify-center shrink-0">
+                                <svg class="w-4.5 h-4.5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
                             </div>
@@ -65,8 +65,8 @@
 
                     <div class="bg-white border border-neutral-100 rounded-xl p-4">
                         <div class="flex items-start gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-[#6F9CA2]/5 flex items-center justify-center shrink-0">
-                                <svg class="w-4.5 h-4.5 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-9 h-9 rounded-lg bg-[#c9a227]/5 flex items-center justify-center shrink-0">
+                                <svg class="w-4.5 h-4.5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
@@ -100,7 +100,7 @@
             <!-- FAQ Sections -->
             <div x-data="{ open: null }" class="space-y-3">
 
-                <p class="text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider pt-2 pb-1">Order Processing</p>
+                <p class="text-xs font-semibold text-[#c9a227] uppercase tracking-wider pt-2 pb-1">Order Processing</p>
 
                 <div class="bg-white border border-neutral-100 rounded-xl overflow-hidden">
                     <button @click="open = open === 1 ? null : 1"
@@ -130,14 +130,14 @@
                             <p class="pt-3">Once your order ships, you'll receive an SMS and email with tracking details. You can also:</p>
                             <ul class="mt-2 space-y-1 list-disc list-inside text-neutral-600">
                                 <li>Log into your account and check your order history</li>
-                                <li>Use our <a href="{{ route('track-order') }}" class="text-[#6F9CA2] hover:text-[#5B878D] font-medium">order tracking page</a></li>
+                                <li>Use our <a href="{{ route('track-order') }}" class="text-[#c9a227] hover:text-[#a9851f] font-medium">order tracking page</a></li>
                                 <li>Click the tracking link in your shipping confirmation email</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <p class="text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider pt-4 pb-1">Delivery Details</p>
+                <p class="text-xs font-semibold text-[#c9a227] uppercase tracking-wider pt-4 pb-1">Delivery Details</p>
 
                 <div class="bg-white border border-neutral-100 rounded-xl overflow-hidden">
                     <button @click="open = open === 3 ? null : 3"
@@ -184,7 +184,7 @@
                     </div>
                 </div>
 
-                <p class="text-xs font-semibold text-[#6F9CA2] uppercase tracking-wider pt-4 pb-1">Issues & Support</p>
+                <p class="text-xs font-semibold text-[#c9a227] uppercase tracking-wider pt-4 pb-1">Issues & Support</p>
 
                 <div class="bg-white border border-neutral-100 rounded-xl overflow-hidden">
                     <button @click="open = open === 6 ? null : 6"
@@ -219,15 +219,15 @@
 
             <!-- Still Need Help -->
             <div class="mt-10 bg-white border border-neutral-100 rounded-xl p-6 sm:p-8 text-center">
-                <div class="w-11 h-11 mx-auto rounded-full bg-[#6F9CA2]/5 flex items-center justify-center mb-3">
-                    <svg class="w-5 h-5 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-11 h-11 mx-auto rounded-full bg-[#c9a227]/5 flex items-center justify-center mb-3">
+                    <svg class="w-5 h-5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                     </svg>
                 </div>
                 <h3 class="text-[15px] font-bold text-neutral-900 mb-1">Need more help?</h3>
                 <p class="text-[13px] text-neutral-600 mb-4">Our support team is available to assist with any delivery questions.</p>
                 <a href="{{ route('contact') }}"
-                   class="inline-flex items-center px-6 py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold rounded-xl transition-colors">
+                   class="inline-flex items-center px-6 py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold rounded-xl transition-colors">
                     Contact Support
                 </a>
             </div>

@@ -39,7 +39,7 @@
                 This year
             </button>
             @if($hasDateFilter)
-                <a href="{{ route('admin.dashboard') }}" style="padding: 0.375rem 0.75rem; font-size: 12px; font-weight: 500; border-radius: 50rem; color: #6F9CA2; text-decoration: none;">Clear filter</a>
+                <a href="{{ route('admin.dashboard') }}" style="padding: 0.375rem 0.75rem; font-size: 12px; font-weight: 500; border-radius: 50rem; color: #c9a227; text-decoration: none;">Clear filter</a>
             @endif
         </form>
         @if($hasDateFilter)

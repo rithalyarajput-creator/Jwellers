@@ -264,7 +264,7 @@ class SaleController extends Controller
         $returnPolicy  = \App\Models\Setting::get('pos_return_policy', 'Exchange/Return within 7 days with receipt.');
 
         return response()->json([
-            'store_name'     => $store->name ?? 'ForeverKids',
+            'store_name'     => $store->name ?? 'Jwellers',
             'store_address'  => trim(implode(', ', array_filter([$store->address, $store->city, $store->state]))),
             'store_phone'    => $store->phone ?? '',
             'gstin'          => $store->gst_number ?? '',

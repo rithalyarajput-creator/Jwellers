@@ -1,6 +1,6 @@
 {{-- Thermal label template — parameterised. One label per page (printer feeds between).
      $cfg keys: w (mm), h (mm), pad (mm), name_pt, meta_pt, code_pt, bar_h (mm), name (label-set title).
-     Sizes supported today: 50×20mm (default · current Foreverkids roll), 50×25mm (legacy roll). --}}
+     Sizes supported today: 50×20mm (default · current Jwellers roll), 50×25mm (legacy roll). --}}
 @php
     /** @var array{w:float,h:float,pad:float,name_pt:float,meta_pt:float,code_pt:float,bar_h:float,name:string} $cfg */
 @endphp

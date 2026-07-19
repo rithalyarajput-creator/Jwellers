@@ -1,11 +1,11 @@
 {
-    "name": "ForeverKids",
-    "short_name": "ForeverKids",
-    "description": "Kids' clothing store offering fashionable and comfortable outfits for children",
+    "name": "Jwellers",
+    "short_name": "Jwellers",
+    "description": "Fine jewellery store offering exquisite gold, diamond, and silver pieces crafted with timeless elegance",
     "start_url": "/",
     "display": "browser",
     "background_color": "#ffffff",
-    "theme_color": "#6F9CA2",
+    "theme_color": "#8a6d3b",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

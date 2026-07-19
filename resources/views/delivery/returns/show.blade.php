@@ -17,7 +17,7 @@
                 $statusColors = [
                     'approved' => 'bg-info-50 text-info-700',
                     'pickup_scheduled' => 'bg-warning-50 text-warning-700',
-                    'picked_up' => 'bg-[#6F9CA2]/10 text-[#5B878D]',
+                    'picked_up' => 'bg-[#c9a227]/10 text-[#a9851f]',
                     'received' => 'bg-success-50 text-success-700',
                     'processed' => 'bg-success-50 text-success-700',
                     'completed' => 'bg-success-50 text-success-700',
@@ -57,8 +57,8 @@
                             </form>
                         @elseif($return->status === 'pickup_scheduled')
                             <div class="flex items-center gap-3 mb-3">
-                                <div class="w-10 h-10 rounded-full bg-[#6F9CA2]/10 flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-[#6F9CA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                                <div class="w-10 h-10 rounded-full bg-[#c9a227]/10 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-neutral-900">Confirm Pickup</p>

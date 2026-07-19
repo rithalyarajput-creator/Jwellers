@@ -9,10 +9,10 @@
     </div>
 
     <!-- Header -->
-    <div class="bg-[#F8931D]">
+    <div class="bg-[#7a1f2b]">
         <div class="container mx-auto px-4 py-6 md:py-8">
             <h1 class="text-2xl md:text-3xl font-bold text-white">Shop by Category</h1>
-            <p class="text-white text-sm mt-1">Browse our wide range of kids' clothing & accessories</p>
+            <p class="text-white text-sm mt-1">Browse our wide range of fine jewellery & accessories</p>
         </div>
     </div>
 
@@ -27,8 +27,8 @@
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                  loading="lazy">
                         @else
-                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#6F9CA2]/5 to-[#6F9CA2]/10">
-                                <svg class="w-12 h-12 text-[#6F9CA2]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#c9a227]/5 to-[#c9a227]/10">
+                                <svg class="w-12 h-12 text-[#c9a227]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                                 </svg>
                             </div>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="p-3">
-                        <h3 class="font-semibold text-sm text-neutral-900 group-hover:text-[#6F9CA2] transition-colors">
+                        <h3 class="font-semibold text-sm text-neutral-900 group-hover:text-[#c9a227] transition-colors">
                             {{ $category->name }}
                         </h3>
                         @if($category->children->count())
@@ -47,7 +47,7 @@
                                     <span class="text-[11px] text-neutral-600 bg-neutral-50 border border-neutral-100 rounded-full px-2 py-0.5">{{ $child->name }}</span>
                                 @endforeach
                                 @if($category->children->count() > 3)
-                                    <span class="text-[11px] text-[#6F9CA2] bg-[#6F9CA2]/5 border border-[#6F9CA2]/15 rounded-full px-2 py-0.5">+{{ $category->children->count() - 3 }} more</span>
+                                    <span class="text-[11px] text-[#c9a227] bg-[#c9a227]/5 border border-[#c9a227]/15 rounded-full px-2 py-0.5">+{{ $category->children->count() - 3 }} more</span>
                                 @endif
                             </div>
                         @endif

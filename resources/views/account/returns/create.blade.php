@@ -9,7 +9,7 @@
                 <div class="flex-1">
                     {{-- Breadcrumb --}}
                     <div class="flex items-center gap-2 text-sm text-neutral-600 mb-5">
-                        <a href="{{ route('account.returns.index') }}" class="hover:text-[#6F9CA2] transition-colors">My Returns</a>
+                        <a href="{{ route('account.returns.index') }}" class="hover:text-[#c9a227] transition-colors">My Returns</a>
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         <span class="text-neutral-900 font-medium">New Request</span>
                     </div>
@@ -23,7 +23,7 @@
                             </div>
                             <h3 class="text-base font-semibold text-neutral-900 mb-1">No eligible orders</h3>
                             <p class="text-sm text-neutral-600 mb-5">You don't have any eligible orders. Returns are available {{ $returnMinHours }} hours after delivery, within a {{ $returnWindowDays }}-day window. Items already returned are excluded.</p>
-                            <a href="{{ route('account.orders.index') }}" class="inline-flex items-center gap-2 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
+                            <a href="{{ route('account.orders.index') }}" class="inline-flex items-center gap-2 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">
                                 View Orders
                             </a>
                         </div>
@@ -72,18 +72,18 @@
                             {{-- Step 1: Select Order --}}
                             <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
                                 <div class="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
-                                    <span class="w-5 h-5 bg-[#F8931D] text-white text-[11px] font-bold rounded-full flex items-center justify-center">1</span>
+                                    <span class="w-5 h-5 bg-[#7a1f2b] text-white text-[11px] font-bold rounded-full flex items-center justify-center">1</span>
                                     <h2 class="text-sm font-bold text-neutral-900">Select Order</h2>
                                 </div>
                                 <div class="p-5">
                                     <div class="grid gap-2">
                                         @foreach($orders as $order)
                                             <label @click="selectedOrder = '{{ $order->id }}'; selectedItems = []"
-                                                   :class="selectedOrder == '{{ $order->id }}' ? 'border-[#6F9CA2]/50 bg-[#6F9CA2]/5 ring-1 ring-[#6F9CA2]/30' : 'border-neutral-200 hover:border-neutral-300 bg-white'"
+                                                   :class="selectedOrder == '{{ $order->id }}' ? 'border-[#c9a227]/50 bg-[#c9a227]/5 ring-1 ring-[#c9a227]/30' : 'border-neutral-200 hover:border-neutral-300 bg-white'"
                                                    class="flex items-center justify-between p-3.5 rounded-lg border cursor-pointer transition-all">
                                                 <input type="radio" name="order_id" value="{{ $order->id }}" x-model="selectedOrder" class="sr-only">
                                                 <div class="flex items-center gap-3">
-                                                    <div :class="selectedOrder == '{{ $order->id }}' ? 'border-[#6F9CA2] bg-[#F8931D]' : 'border-neutral-300'"
+                                                    <div :class="selectedOrder == '{{ $order->id }}' ? 'border-[#c9a227] bg-[#7a1f2b]' : 'border-neutral-300'"
                                                          class="w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors">
                                                         <div x-show="selectedOrder == '{{ $order->id }}'" class="w-1.5 h-1.5 bg-white rounded-full"></div>
                                                     </div>
@@ -105,17 +105,17 @@
                             {{-- Step 2: Return Type --}}
                             <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
                                 <div class="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
-                                    <span class="w-5 h-5 bg-[#F8931D] text-white text-[11px] font-bold rounded-full flex items-center justify-center">2</span>
+                                    <span class="w-5 h-5 bg-[#7a1f2b] text-white text-[11px] font-bold rounded-full flex items-center justify-center">2</span>
                                     <h2 class="text-sm font-bold text-neutral-900">Return Type</h2>
                                 </div>
                                 <div class="p-5">
                                     <div class="grid grid-cols-2 gap-3">
                                         <label @click="type = 'return'"
-                                               :class="type === 'return' ? 'border-[#6F9CA2]/50 bg-[#6F9CA2]/5 ring-1 ring-[#6F9CA2]/30' : 'border-neutral-200 hover:border-neutral-300'"
+                                               :class="type === 'return' ? 'border-[#c9a227]/50 bg-[#c9a227]/5 ring-1 ring-[#c9a227]/30' : 'border-neutral-200 hover:border-neutral-300'"
                                                class="flex items-center gap-3 p-3.5 rounded-lg border cursor-pointer transition-all">
                                             <input type="radio" name="type" value="return" x-model="type" class="sr-only">
                                             <div class="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                                                 :class="type === 'return' ? 'bg-[#6F9CA2]/10 text-[#6F9CA2]' : 'bg-neutral-100 text-neutral-600'">
+                                                 :class="type === 'return' ? 'bg-[#c9a227]/10 text-[#c9a227]' : 'bg-neutral-100 text-neutral-600'">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
                                             </div>
                                             <div>
@@ -124,11 +124,11 @@
                                             </div>
                                         </label>
                                         <label @click="type = 'exchange'"
-                                               :class="type === 'exchange' ? 'border-[#6F9CA2]/50 bg-[#6F9CA2]/5 ring-1 ring-[#6F9CA2]/30' : 'border-neutral-200 hover:border-neutral-300'"
+                                               :class="type === 'exchange' ? 'border-[#c9a227]/50 bg-[#c9a227]/5 ring-1 ring-[#c9a227]/30' : 'border-neutral-200 hover:border-neutral-300'"
                                                class="flex items-center gap-3 p-3.5 rounded-lg border cursor-pointer transition-all">
                                             <input type="radio" name="type" value="exchange" x-model="type" class="sr-only">
                                             <div class="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                                                 :class="type === 'exchange' ? 'bg-[#6F9CA2]/10 text-[#6F9CA2]' : 'bg-neutral-100 text-neutral-600'">
+                                                 :class="type === 'exchange' ? 'bg-[#c9a227]/10 text-[#c9a227]' : 'bg-neutral-100 text-neutral-600'">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
                                             </div>
                                             <div>
@@ -146,11 +146,11 @@
                             {{-- Step 3: Reason --}}
                             <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
                                 <div class="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
-                                    <span class="w-5 h-5 bg-[#F8931D] text-white text-[11px] font-bold rounded-full flex items-center justify-center">3</span>
+                                    <span class="w-5 h-5 bg-[#7a1f2b] text-white text-[11px] font-bold rounded-full flex items-center justify-center">3</span>
                                     <h2 class="text-sm font-bold text-neutral-900">Reason for Return</h2>
                                 </div>
                                 <div class="p-5 space-y-3">
-                                    <select name="reason" required class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50">
+                                    <select name="reason" required class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50">
                                         <option value="">Select a reason...</option>
                                         <option value="Defective or damaged product" {{ old('reason') === 'Defective or damaged product' ? 'selected' : '' }}>Defective or damaged product</option>
                                         <option value="Wrong item received" {{ old('reason') === 'Wrong item received' ? 'selected' : '' }}>Wrong item received</option>
@@ -165,7 +165,7 @@
                                     @enderror
 
                                     <textarea name="description" rows="2" placeholder="Additional details (optional)"
-                                              class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50 resize-none">{{ old('description') }}</textarea>
+                                              class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2.5 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50 resize-none">{{ old('description') }}</textarea>
                                     @error('description')
                                         <p class="text-sm text-red-600">{{ $message }}</p>
                                     @enderror
@@ -175,7 +175,7 @@
                             {{-- Step 4: Select Items --}}
                             <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden" x-show="currentOrder" x-cloak>
                                 <div class="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
-                                    <span class="w-5 h-5 bg-[#F8931D] text-white text-[11px] font-bold rounded-full flex items-center justify-center">4</span>
+                                    <span class="w-5 h-5 bg-[#7a1f2b] text-white text-[11px] font-bold rounded-full flex items-center justify-center">4</span>
                                     <h2 class="text-sm font-bold text-neutral-900">Select Items to Return</h2>
                                 </div>
                                 <div class="p-5">
@@ -183,11 +183,11 @@
 
                                     <div class="space-y-2">
                                         <template x-for="(item, idx) in currentOrder?.items || []" :key="item.id">
-                                            <div :class="isSelected(item.id) ? 'border-[#6F9CA2]/50 bg-[#6F9CA2]/5/30 ring-1 ring-[#6F9CA2]/30' : 'border-neutral-200'"
+                                            <div :class="isSelected(item.id) ? 'border-[#c9a227]/50 bg-[#c9a227]/5/30 ring-1 ring-[#c9a227]/30' : 'border-neutral-200'"
                                                  class="rounded-lg border transition-all overflow-hidden">
                                                 {{-- Item header --}}
                                                 <div @click="toggleItem(item.id)" class="flex items-center gap-3 p-3.5 cursor-pointer">
-                                                    <div :class="isSelected(item.id) ? 'bg-[#F8931D] border-[#6F9CA2]' : 'border-neutral-300'"
+                                                    <div :class="isSelected(item.id) ? 'bg-[#7a1f2b] border-[#c9a227]' : 'border-neutral-300'"
                                                          class="w-4.5 h-4.5 rounded border-2 flex items-center justify-center shrink-0 transition-colors">
                                                         <svg x-show="isSelected(item.id)" class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
@@ -217,7 +217,7 @@
                                                                    min="1" :max="item.quantity"
                                                                    x-model.number="getSelected(item.id).quantity"
                                                                    :disabled="!isSelected(item.id)"
-                                                                   class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50">
+                                                                   class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50">
                                                         </div>
 
                                                         {{-- Condition --}}
@@ -226,7 +226,7 @@
                                                             <select :name="'items[' + idx + '][condition]'"
                                                                     x-model="getSelected(item.id).condition"
                                                                     :disabled="!isSelected(item.id)"
-                                                                    class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50">
+                                                                    class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50">
                                                                 <option value="unopened">Unopened</option>
                                                                 <option value="opened">Opened</option>
                                                                 <option value="damaged">Damaged</option>
@@ -241,7 +241,7 @@
                                                                    x-model="getSelected(item.id).reason"
                                                                    :disabled="!isSelected(item.id)"
                                                                    placeholder="Any specific issue?"
-                                                                   class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2 focus:border-[#6F9CA2]/50 focus:ring focus:ring-[#6F9CA2]/15 focus:ring-opacity-50">
+                                                                   class="w-full rounded-lg border border-neutral-200 text-sm px-3 py-2 focus:border-[#c9a227]/50 focus:ring focus:ring-[#c9a227]/15 focus:ring-opacity-50">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -258,8 +258,8 @@
                             <div class="flex items-center gap-3 pt-2">
                                 <button type="submit"
                                         :disabled="selectedItems.length === 0"
-                                        :class="selectedItems.length === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#E07E0A]'"
-                                        class="inline-flex items-center gap-2 bg-[#F8931D] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors">
+                                        :class="selectedItems.length === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#5f1721]'"
+                                        class="inline-flex items-center gap-2 bg-[#7a1f2b] text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                     Submit Return Request
                                 </button>

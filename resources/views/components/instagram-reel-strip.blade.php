@@ -4,8 +4,8 @@
     {{-- Render nothing — keeps PDP clean for products with no matched reels --}}
 @else
     @php
-        $igHandle = \App\Models\Setting::get('social_instagram_handle', 'foreverkids');
-        $igHandle = ltrim((string) $igHandle, '@') ?: 'foreverkids';
+        $igHandle = \App\Models\Setting::get('social_instagram_handle', 'jwellers');
+        $igHandle = ltrim((string) $igHandle, '@') ?: 'jwellers';
     @endphp
 
     <section class="ig-reel-strip" aria-labelledby="ig-reel-strip-heading">
@@ -34,7 +34,7 @@
                 margin: 0;
             }
             .ig-reel-strip .ig-strip-title svg {
-                width: 18px; height: 18px; color: #6F9CA2;
+                width: 18px; height: 18px; color: #c9a227;
             }
             .ig-reel-strip .ig-follow-btn {
                 display: inline-flex;

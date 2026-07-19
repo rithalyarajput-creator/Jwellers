@@ -15,7 +15,7 @@ class ImportProductsFromExcel extends Command
                             {--dry-run : Preview import without writing to database}
                             {--update-stock : Only update stock for existing products}';
 
-    protected $description = 'Import products from ForeverKids Excel stock report';
+    protected $description = 'Import products from Jwellers Excel stock report';
 
     // Column indices (0-based) for the stock report
     private const COL_CODE = 0;

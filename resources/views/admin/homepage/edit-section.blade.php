@@ -101,8 +101,8 @@
                         <div>
                             <label class="form-label" style="font-size: 13px; font-weight: 500; color: #303030;">Background Color</label>
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                <input type="color" name="background_color" value="{{ $section->background_color ?? '#6F9CA2' }}" style="width: 2.5rem; height: 2.5rem; border-radius: 0.375rem; border: 1px solid #c9cccf; cursor: pointer; padding: 0.125rem;">
-                                <input type="text" value="{{ $section->background_color ?? '#6F9CA2' }}" class="form-input" style="flex: 1;" readonly>
+                                <input type="color" name="background_color" value="{{ $section->background_color ?? '#c9a227' }}" style="width: 2.5rem; height: 2.5rem; border-radius: 0.375rem; border: 1px solid #c9cccf; cursor: pointer; padding: 0.125rem;">
+                                <input type="text" value="{{ $section->background_color ?? '#c9a227' }}" class="form-input" style="flex: 1;" readonly>
                             </div>
                             <p style="font-size: 12px; color: #616161; margin-top: 0.25rem;">Used when no background image is set</p>
                         </div>

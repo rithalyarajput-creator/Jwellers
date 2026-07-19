@@ -40,12 +40,12 @@
             'dateModified' => $post->updated_at->toIso8601String(),
             'author' => [
                 '@type' => 'Organization',
-                'name' => config('app.name', 'ForeverKids'),
+                'name' => config('app.name', 'Jwellers'),
                 'url' => url('/'),
             ],
             'publisher' => [
                 '@type' => 'Organization',
-                'name' => config('app.name', 'ForeverKids'),
+                'name' => config('app.name', 'Jwellers'),
                 'logo' => [
                     '@type' => 'ImageObject',
                     'url' => asset('images/colorlogo.png'),

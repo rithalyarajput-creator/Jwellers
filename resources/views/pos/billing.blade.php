@@ -74,7 +74,7 @@
                                 <span x-text="product.article_no || product.name"></span>
                                 <template x-if="product.matched_variant">
                                     <span class="ml-1 inline-block px-1.5 py-0.5 rounded text-[10px] font-bold align-middle"
-                                          style="background:#6F9CA2; color:white;"
+                                          style="background:#c9a227; color:white;"
                                           x-text="(product.matched_variant.size || '') + (product.matched_variant.color ? ' · ' + product.matched_variant.color : '')"></span>
                                 </template>
                             </div>

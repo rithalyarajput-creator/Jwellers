@@ -162,7 +162,7 @@
                                                 </div>
                                             </a>
                                             <div class="p-2">
-                                                <a :href="rec.url" class="text-xs font-medium text-neutral-900 line-clamp-2 mb-1 block hover:text-[#6F9CA2]" x-text="rec.name"></a>
+                                                <a :href="rec.url" class="text-xs font-medium text-neutral-900 line-clamp-2 mb-1 block hover:text-[#c9a227]" x-text="rec.name"></a>
                                                 <div class="flex items-baseline gap-1 mb-1.5">
                                                     <span class="text-xs font-bold text-neutral-900" x-text="'₹' + rec.price.toLocaleString('en-IN')"></span>
                                                     <template x-if="rec.mrp > rec.price">
@@ -171,8 +171,8 @@
                                                 </div>
                                                 <button @click="$store.cart.add(rec.id)"
                                                         class="w-full py-1 text-[10px] font-semibold text-white rounded transition-colors"
-                                                        style="background:#F8931D;"
-                                                        onmouseenter="this.style.background='#E07E0A'" onmouseleave="this.style.background='#F8931D'">
+                                                        style="background:#7a1f2b;"
+                                                        onmouseenter="this.style.background='#5f1721'" onmouseleave="this.style.background='#7a1f2b'">
                                                     Add
                                                 </button>
                                             </div>
@@ -287,7 +287,7 @@
                                             :disabled="$store.cart.checkoutPending"
                                             :class="{ 'opacity-60 cursor-wait': $store.cart.checkoutPending }"
                                             class="w-full py-3 px-4 flex flex-col items-center justify-center gap-1 rounded-full font-bold tracking-wide text-white transition-all shadow-md hover:shadow-lg cursor-pointer"
-                                            style="background: linear-gradient(135deg, #6F9CA2 0%, #4f7d83 100%); border: 1px solid #4f7d83;">
+                                            style="background: linear-gradient(135deg, #c9a227 0%, #4f7d83 100%); border: 1px solid #4f7d83;">
                                         <span class="text-[13px] font-bold leading-none" x-show="!$store.cart.checkoutPending">CHECKOUT</span>
                                         <span class="text-[13px] font-bold leading-none" x-show="$store.cart.checkoutPending" x-cloak>REDIRECTING...</span>
                                         <span class="text-[9px] font-medium opacity-90 leading-none">Powered by <span class="font-bold tracking-tight">Shiprocket</span></span>
@@ -324,15 +324,15 @@
             <template x-if="items.length === 0">
                 <!-- Empty Cart -->
                 <div class="flex flex-col items-center justify-center bg-white rounded-xl border border-neutral-100 py-20 px-6 mt-4">
-                    <div class="w-24 h-24 mb-6 bg-[#6F9CA2]/5 rounded-full flex items-center justify-center">
-                        <svg class="w-12 h-12 text-[#6F9CA2]/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-24 h-24 mb-6 bg-[#c9a227]/5 rounded-full flex items-center justify-center">
+                        <svg class="w-12 h-12 text-[#c9a227]/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                         </svg>
                     </div>
                     <h2 class="text-xl font-bold text-neutral-800 mb-2">Your bag is empty</h2>
                     <p class="text-sm text-neutral-600 mb-8 max-w-sm text-center leading-relaxed">There is nothing in your bag. Let's add some items.</p>
                     <a href="{{ route('products.index') }}"
-                       class="inline-flex items-center gap-2 bg-[#F8931D] hover:bg-[#E07E0A] text-white text-sm font-semibold px-10 py-3 rounded-lg transition-colors shadow-md shadow-[#F8931D]/20">
+                       class="inline-flex items-center gap-2 bg-[#7a1f2b] hover:bg-[#5f1721] text-white text-sm font-semibold px-10 py-3 rounded-lg transition-colors shadow-md shadow-[#7a1f2b]/20">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                         Start Shopping
                     </a>

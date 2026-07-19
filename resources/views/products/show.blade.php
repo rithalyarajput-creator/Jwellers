@@ -140,7 +140,7 @@
                         <button @mouseenter="currentImage = {{ $i }}" @click="currentImage = {{ $i }}"
                                 class="rounded overflow-hidden transition-all"
                                 style="width:64px;height:64px;padding:2px;"
-                                :style="currentImage === {{ $i }} ? 'border:2px solid #6F9CA2;' : 'border:2px solid #e5e5e5;'">
+                                :style="currentImage === {{ $i }} ? 'border:2px solid #c9a227;' : 'border:2px solid #e5e5e5;'">
                             <img src="{{ $img }}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:2px;">
                         </button>
                         @endforeach
@@ -197,7 +197,7 @@
                             @foreach($images as $i => $img)
                             <button @click="currentImage = {{ $i }}"
                                     style="height:0.5rem;border-radius:9999px;border:none;cursor:pointer;transition:all 0.2s;"
-                                    :style="currentImage === {{ $i }} ? 'background:#6F9CA2;width:20px;' : 'background:#d1d5db;width:8px;'"></button>
+                                    :style="currentImage === {{ $i }} ? 'background:#c9a227;width:20px;' : 'background:#d1d5db;width:8px;'"></button>
                             @endforeach
                         </div>
                         @endif
@@ -218,7 +218,7 @@
                 <!-- Brand -->
                 @if($product->brand)
                 <a href="{{ route('products.index', ['brand' => $product->brand->slug ?? '']) }}"
-                   style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#6F9CA2;text-decoration:none;display:inline-block;margin-bottom:0.25rem;">
+                   style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#c9a227;text-decoration:none;display:inline-block;margin-bottom:0.25rem;">
                     {{ $product->brand->name }}
                 </a>
                 @endif
@@ -288,7 +288,7 @@
                     <h3 style="font-size:14px;font-weight:700;color:#0F1111;margin-bottom:0.5rem;">Offers</h3>
                     <div style="display:flex;flex-direction:column;gap:0.5rem;">
                         @foreach($activeCoupons as $coupon)
-                        <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem 0.75rem;border:1px dashed #6F9CA2;border-radius:0.5rem;background:#f8fcfc;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem 0.75rem;border:1px dashed #c9a227;border-radius:0.5rem;background:#f8fcfc;">
                             <div style="display:flex;align-items:center;gap:0.5rem;">
                                 <span style="display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:0.25rem;background:#CC0C39;color:#fff;flex-shrink:0;">
                                     <svg style="width:0.75rem;height:0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
@@ -310,7 +310,7 @@
                                 </div>
                             </div>
                             <button @click="navigator.clipboard.writeText('{{ $coupon->code }}'); copiedCode = '{{ $coupon->code }}'; setTimeout(() => copiedCode = '', 2000)"
-                                    style="font-size:12px;font-weight:600;color:#6F9CA2;background:none;border:1px solid #6F9CA2;border-radius:0.25rem;padding:0.25rem 0.625rem;cursor:pointer;white-space:nowrap;"
+                                    style="font-size:12px;font-weight:600;color:#c9a227;background:none;border:1px solid #c9a227;border-radius:0.25rem;padding:0.25rem 0.625rem;cursor:pointer;white-space:nowrap;"
                                     x-text="copiedCode === '{{ $coupon->code }}' ? 'Copied!' : 'Copy'">Copy</button>
                         </div>
                         @endforeach
@@ -384,7 +384,7 @@
                         content: '';
                         display: inline-block;
                         width: 18px; height: 2px;
-                        background: linear-gradient(90deg, #6F9CA2, #FFB454);
+                        background: linear-gradient(90deg, #c9a227, #FFB454);
                         margin-left: 8px;
                         vertical-align: middle;
                         border-radius: 2px;
@@ -429,7 +429,7 @@
                     .vg-size-btn:active { transform: translateY(0); }
                     .vg-size-btn.is-selected {
                         border-color: transparent !important;
-                        background: linear-gradient(135deg, #6F9CA2 0%, #4f7d83 100%) !important;
+                        background: linear-gradient(135deg, #c9a227 0%, #4f7d83 100%) !important;
                         color: #fff !important;
                         box-shadow: 0 6px 18px rgba(79,125,131,0.42),
                                     inset 0 1px 0 rgba(255,255,255,0.25) !important;
@@ -473,9 +473,9 @@
                     }
                     .vg-color-btn:active { transform: translateY(0); }
                     .vg-color-btn.is-selected {
-                        border-color: #6F9CA2 !important;
+                        border-color: #c9a227 !important;
                         background: linear-gradient(135deg, #fff 0%, #eef6f6 100%) !important;
-                        box-shadow: 0 6px 18px rgba(79,125,131,0.25), inset 0 0 0 1px rgba(111,156,162,0.18) !important;
+                        box-shadow: 0 6px 18px rgba(79,125,131,0.25), inset 0 0 0 1px rgba(201,162,39,0.18) !important;
                         transform: translateY(-1px);
                     }
                     .vg-color-swatch {
@@ -490,7 +490,7 @@
                     }
                     .vg-color-btn:hover .vg-color-swatch { transform: scale(1.08) rotate(-3deg); }
                     .vg-color-btn.is-selected .vg-color-swatch {
-                        box-shadow: 0 0 0 3px #6F9CA2,
+                        box-shadow: 0 0 0 3px #c9a227,
                                     0 0 0 5px #fff,
                                     0 2px 6px rgba(0,0,0,0.18);
                     }
@@ -508,7 +508,7 @@
                         <div class="vg-header">
                             <span class="vg-label">{{ $attrName }}</span>
                             <template x-if="selectedAttributes['{{ $attrName }}']">
-                                <span class="vg-selected" style="color:#6F9CA2;" x-text="selectedAttributes['{{ $attrName }}']"></span>
+                                <span class="vg-selected" style="color:#c9a227;" x-text="selectedAttributes['{{ $attrName }}']"></span>
                             </template>
                             <template x-if="!selectedAttributes['{{ $attrName }}']">
                                 <span class="vg-empty">Pick a {{ strtolower($attrName) }}</span>
@@ -579,7 +579,7 @@
                                             headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
                                             body: JSON.stringify({ email: bisEmail })
                                         }).then(r => r.json()).then(d => { bisSubmitted = true; }).catch(() => { bisError = 'Something went wrong'; });
-                                    " style="flex:0 0 auto;padding:0.5rem 1rem;border-radius:0.375rem;font-size:13px;font-weight:600;background:#6F9CA2;color:#fff;border:none;cursor:pointer;white-space:nowrap;">
+                                    " style="flex:0 0 auto;padding:0.5rem 1rem;border-radius:0.375rem;font-size:13px;font-weight:600;background:#c9a227;color:#fff;border:none;cursor:pointer;white-space:nowrap;">
                                         Notify Me
                                     </button>
                                 </div>
@@ -605,7 +605,7 @@
                         @endphp
                         <div style="margin-bottom:0.75rem;padding:0.5rem 0.625rem;border:1px solid #e5e5e5;border-radius:0.5rem;background:#f7fafa;">
                             <div style="display:flex;align-items:flex-start;gap:0.5rem;">
-                                <svg style="width:1.125rem;height:1.125rem;color:#6F9CA2;flex-shrink:0;margin-top:1px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+                                <svg style="width:1.125rem;height:1.125rem;color:#c9a227;flex-shrink:0;margin-top:1px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
                                 <div>
                                     <span style="font-size:13px;color:#0F1111;font-weight:500;">FREE Delivery: </span>
                                     <span style="font-size:13px;color:#0F1111;font-weight:700;">{{ $deliveryMin->format('D, d M') }} - {{ $deliveryMax->format('D, d M') }}</span>
@@ -640,7 +640,7 @@
                                 :disabled="$store.cart.isLoading || $store.cart.checkoutPending || (!inStock)"
                                 :class="{ 'opacity-60 cursor-wait': $store.cart.checkoutPending }"
                                 class="w-full py-3 px-4 flex flex-col items-center justify-center gap-1 rounded-full font-bold tracking-wide text-white transition-all shadow-md hover:shadow-lg cursor-pointer"
-                                style="background: linear-gradient(135deg, #6F9CA2 0%, #4f7d83 100%); border: 1px solid #4f7d83;">
+                                style="background: linear-gradient(135deg, #c9a227 0%, #4f7d83 100%); border: 1px solid #4f7d83;">
                             <span class="text-[14px] font-bold leading-none" x-show="!$store.cart.checkoutPending">BUY NOW</span>
                             <span class="text-[14px] font-bold leading-none" x-show="$store.cart.checkoutPending" x-cloak>REDIRECTING...</span>
                             <span class="text-[10px] font-medium opacity-90 leading-none">Powered by <span class="font-bold tracking-tight">Shiprocket</span></span>
@@ -649,22 +649,22 @@
 
                         <!-- Secure Transaction -->
                         <div style="margin-top:1rem;display:flex;align-items:center;gap:0.375rem;">
-                            <svg style="width:0.875rem;height:0.875rem;color:#6F9CA2;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                            <span style="font-size:12px;font-weight:500;color:#6F9CA2;">Secure transaction</span>
+                            <svg style="width:0.875rem;height:0.875rem;color:#c9a227;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            <span style="font-size:12px;font-weight:500;color:#c9a227;">Secure transaction</span>
                         </div>
 
                         <!-- Payment Badges -->
                         <div style="display:flex;align-items:center;gap:0.375rem;flex-wrap:wrap;margin-top:0.5rem;">
                             <span style="font-size:10px;font-weight:600;color:#1A1F71;background:#f0f0f0;padding:0.125rem 0.375rem;border-radius:0.125rem;">VISA</span>
                             <span style="font-size:10px;font-weight:600;color:#EB001B;background:#f0f0f0;padding:0.125rem 0.375rem;border-radius:0.125rem;">MC</span>
-                            <span style="font-size:10px;font-weight:600;color:#6F9CA2;background:#f0f0f0;padding:0.125rem 0.375rem;border-radius:0.125rem;">UPI</span>
+                            <span style="font-size:10px;font-weight:600;color:#c9a227;background:#f0f0f0;padding:0.125rem 0.375rem;border-radius:0.125rem;">UPI</span>
                             <span style="font-size:10px;font-weight:600;color:#005BAC;background:#f0f0f0;padding:0.125rem 0.375rem;border-radius:0.125rem;">RuPay</span>
                             <span style="font-size:10px;font-weight:600;color:#333;background:#f0f0f0;padding:0.125rem 0.375rem;border-radius:0.125rem;">Net Banking</span>
                         </div>
 
                         <!-- Pay on Delivery -->
                         <div style="margin-top:0.5rem;">
-                            <span style="font-size:10px;font-weight:600;color:#fff;background:#6F9CA2;padding:0.125rem 0.5rem;border-radius:0.125rem;">Pay on Delivery</span>
+                            <span style="font-size:10px;font-weight:600;color:#fff;background:#c9a227;padding:0.125rem 0.5rem;border-radius:0.125rem;">Pay on Delivery</span>
                         </div>
                     </div>
 
@@ -797,7 +797,7 @@
                             </a>
                             <label style="position:absolute;top:-0.25rem;right:-0.25rem;background:#fff;border-radius:0.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.15);cursor:pointer;">
                                 <input type="checkbox" x-model="item.checked" :disabled="idx === 0"
-                                       style="width:1.125rem;height:1.125rem;accent-color:#6F9CA2;cursor:pointer;">
+                                       style="width:1.125rem;height:1.125rem;accent-color:#c9a227;cursor:pointer;">
                             </label>
                         </div>
                     </div>
@@ -819,7 +819,7 @@
             <div style="margin-top:0.75rem;">
                 <template x-for="item in items" :key="item.id">
                     <div style="display:flex;align-items:center;gap:0.5rem;font-size:13px;padding:0.25rem 0;">
-                        <input type="checkbox" x-model="item.checked" style="width:0.875rem;height:0.875rem;accent-color:#6F9CA2;cursor:pointer;">
+                        <input type="checkbox" x-model="item.checked" style="width:0.875rem;height:0.875rem;accent-color:#c9a227;cursor:pointer;">
                         <a :href="item.url" style="color:#007185;font-weight:500;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:20rem;" x-text="item.name"></a>
                         <span style="font-weight:700;color:#0F1111;flex-shrink:0;" x-text="'₹' + item.price.toLocaleString('en-IN')"></span>
                     </div>
@@ -965,7 +965,7 @@
                 @foreach($product->reviews as $review)
                 <div style="padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid #e5e5e5;">
                     <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem;">
-                        <div style="width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:#6F9CA2;color:#fff;">
+                        <div style="width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:#c9a227;color:#fff;">
                             {{ strtoupper(substr($review->user?->first_name ?? 'A', 0, 1)) }}
                         </div>
                         <span style="font-size:13px;font-weight:500;color:#0F1111;">{{ $review->user?->first_name ?? 'Anonymous' }}</span>

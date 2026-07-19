@@ -83,7 +83,7 @@ class SetPageToken extends Command
         $this->info('Next steps:');
         $this->line('  1. php artisan nia:debug-token   # confirm scopes include pages_messaging + pages_manage_metadata');
         $this->line('  2. php artisan nia:subscribe-ig --page-id=' . config('services.meta.page_id', '<your-page-id>'));
-        $this->line('  3. Send a real DM to @foreverkids09 and watch lead_chats');
+        $this->line('  3. Send a real DM to @jwellers and watch lead_chats');
 
         return self::SUCCESS;
     }

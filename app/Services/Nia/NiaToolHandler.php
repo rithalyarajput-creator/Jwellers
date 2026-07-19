@@ -26,20 +26,20 @@ class NiaToolHandler
         return [
             [
                 'name'        => 'lookup_products',
-                'description' => 'Search the live ForeverKids product catalog. Use this BEFORE recommending any product. Never invent SKUs, prices, or stock.',
+                'description' => 'Search the live Jwellers product catalog. Use this BEFORE recommending any product. Never invent SKUs, prices, or stock.',
                 'input_schema' => [
                     'type' => 'object',
                     'properties' => [
-                        'query'             => ['type' => 'string', 'description' => 'Free-text search, e.g. "red frock"'],
-                        'gender'            => ['type' => 'string', 'enum' => ['girl', 'boy', 'unisex']],
-                        'age_band'          => ['type' => 'string', 'description' => 'e.g. 0-3m, 1-3y, 3-6y'],
-                        'occasion'          => ['type' => 'string', 'description' => 'e.g. party, casual, festive, wedding'],
+                        'query'             => ['type' => 'string', 'description' => 'Free-text search, e.g. "gold necklace"'],
+                        'gender'            => ['type' => 'string', 'enum' => ['women', 'men', 'unisex']],
+                        'age_band'          => ['type' => 'string', 'description' => 'metal / material, e.g. gold, silver, diamond, platinum'],
+                        'occasion'          => ['type' => 'string', 'description' => 'e.g. party, casual, festive, wedding, bridal'],
                         'color'             => ['type' => 'string'],
                         'max_price'         => ['type' => 'number'],
                         'category_keywords' => [
                             'type' => 'array',
                             'items' => ['type' => 'string'],
-                            'description' => 'e.g. ["frock"], ["tshirt", "kurta"]',
+                            'description' => 'e.g. ["necklace"], ["earrings", "ring"]',
                         ],
                         'limit' => ['type' => 'integer', 'minimum' => 1, 'maximum' => 10],
                     ],

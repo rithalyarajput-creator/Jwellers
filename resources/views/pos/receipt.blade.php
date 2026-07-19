@@ -27,7 +27,7 @@
         .total-row { font-size: 14px; font-weight: bold; }
         .footer { font-size: 10px; color: #333; margin-top: 10px; text-align: center; }
         .no-print button { min-height: 44px; min-width: 44px; }
-        .no-print button:focus-visible { outline: 2px solid #6F9CA2; outline-offset: 2px; }
+        .no-print button:focus-visible { outline: 2px solid #c9a227; outline-offset: 2px; }
         @media print {
             body { max-width: 100%; padding: 0; }
             .no-print { display: none; }
@@ -143,7 +143,7 @@
 
     {{-- Print Button (screen only) --}}
     <div class="center no-print" style="margin-top: 20px;">
-        <button onclick="window.print()" aria-label="Print receipt" style="padding: 8px 24px; font-size: 14px; cursor: pointer; background: #6F9CA2; color: white; border: none; border-radius: 6px;">
+        <button onclick="window.print()" aria-label="Print receipt" style="padding: 8px 24px; font-size: 14px; cursor: pointer; background: #c9a227; color: white; border: none; border-radius: 6px;">
             Print Receipt
         </button>
         <button onclick="window.close()" aria-label="Close receipt window" style="padding: 8px 24px; font-size: 14px; cursor: pointer; background: #E2E8F0; color: #1a1a1a; border: none; border-radius: 6px; margin-left: 8px;">

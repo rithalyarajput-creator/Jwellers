@@ -12,7 +12,7 @@ class VerifyProductsAgainstExcel extends Command
                             {file : Path to the Excel file}
                             {--threshold=0.01 : Minimum decimal difference to flag a price drift}';
 
-    protected $description = 'Cross-verify products table against ForeverKids Excel stock report (read-only)';
+    protected $description = 'Cross-verify products table against Jwellers Excel stock report (read-only)';
 
     private const COL_CODE = 0;
     private const COL_NAME = 1;

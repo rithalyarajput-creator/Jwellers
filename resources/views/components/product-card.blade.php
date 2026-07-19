@@ -36,7 +36,7 @@
         'white'=>'#ffffff','off-white'=>'#fafaf6','ivory'=>'#fffff0',
         'grey'=>'#9ca3af','gray'=>'#9ca3af','silver'=>'#d1d5db','black'=>'#1a1a1a',
         'gold'=>'#d4af37',
-        // Foreverkids / MARG-import shorthand colour names
+        // Jwellers / MARG-import shorthand colour names
         'lavende'=>'#c084fc','lavender'=>'#c084fc',
         'biscuit'=>'#d4a373','peach'=>'#fbb6ce',
         'mustard'=>'#f59e0b','wine'=>'#7f1d1d','rust'=>'#b45309',
@@ -163,7 +163,7 @@
                      onerror="this.src='{{ $placeholderImage }}'">
             </div>
             @if($hasDiscount)
-                <span class="absolute top-2 left-2 bg-[#F8931D] text-white font-bold rounded-full text-[8px] w-8 h-8 flex items-center justify-center sm:w-auto sm:h-auto sm:text-[10px] sm:px-2 sm:py-0.5 sm:rounded-md">{{ round($discount) }}%<span class="hidden sm:inline">&nbsp;Off</span></span>
+                <span class="absolute top-2 left-2 bg-[#7a1f2b] text-white font-bold rounded-full text-[8px] w-8 h-8 flex items-center justify-center sm:w-auto sm:h-auto sm:text-[10px] sm:px-2 sm:py-0.5 sm:rounded-md">{{ round($discount) }}%<span class="hidden sm:inline">&nbsp;Off</span></span>
             @endif
         </a>
 
@@ -171,7 +171,7 @@
             @if($product->brand)
                 <p class="text-[10px] text-neutral-600 uppercase tracking-wide mb-0.5">{{ $product->brand->name }}</p>
             @endif
-            <h3 class="text-xs text-[#222] line-clamp-1 mb-1 group-hover:text-[#6F9CA2] leading-snug font-medium">
+            <h3 class="text-xs text-[#222] line-clamp-1 mb-1 group-hover:text-[#c9a227] leading-snug font-medium">
                 {{ $product->name }}
             </h3>
         </a>
@@ -202,13 +202,13 @@
                         @foreach(array_slice($cardSizes, 0, $maxInline) as $sz)
                             <button type="button"
                                     @click.stop.prevent="selectedSize = @js($sz)"
-                                    :class="selectedSize === @js($sz) ? 'border-[#6F9CA2] bg-[#6F9CA2] text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'"
+                                    :class="selectedSize === @js($sz) ? 'border-[#c9a227] bg-[#c9a227] text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'"
                                     class="text-[10px] px-1.5 py-0.5 border rounded leading-none transition-colors min-w-[22px] text-center">
                                 {{ $sz }}
                             </button>
                         @endforeach
                         @if(count($cardSizes) > $maxInline)
-                            <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#6F9CA2]">+{{ count($cardSizes) - $maxInline }}</a>
+                            <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#c9a227]">+{{ count($cardSizes) - $maxInline }}</a>
                         @endif
                     </div>
                 @endif
@@ -220,12 +220,12 @@
                             <button type="button"
                                     title="{{ $clr }}"
                                     @click.stop.prevent="selectedColor = @js($clr)"
-                                    :class="selectedColor === @js($clr) ? 'ring-2 ring-[#6F9CA2] ring-offset-1' : ''"
+                                    :class="selectedColor === @js($clr) ? 'ring-2 ring-[#c9a227] ring-offset-1' : ''"
                                     class="w-4 h-4 rounded-full transition-all border-0"
                                     style="background:{{ $hex }};"></button>
                         @endforeach
                         @if(count($cardColors) > $maxInline)
-                            <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#6F9CA2]">+{{ count($cardColors) - $maxInline }}</a>
+                            <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#c9a227]">+{{ count($cardColors) - $maxInline }}</a>
                         @endif
                     </div>
                 @endif
@@ -239,16 +239,16 @@
                     @if($hasVariantOptions)
                         <button @click.stop.prevent="addToCart()"
                                 :class="isNotifyMode ? 'border border-neutral-200 text-neutral-600 bg-white hover:bg-neutral-50' : 'text-white'"
-                                :style="isNotifyMode ? '' : (canAdd ? 'background:#6F9CA2;' : 'background:#9CA3AF;')"
+                                :style="isNotifyMode ? '' : (canAdd ? 'background:#c9a227;' : 'background:#9CA3AF;')"
                                 class="w-full py-2.5 text-[12px] font-semibold rounded-md transition-colors duration-200">
                             <span x-text="isNotifyMode ? 'Notify Me' : (canAdd ? 'Add to Bag' : 'Select options')">Add to Bag</span>
                         </button>
                     @else
                         <button @click="$store.cart.add({{ $product->id }})"
                                 class="w-full py-2.5 text-[12px] font-semibold text-white rounded-md transition-colors duration-200"
-                                style="background:#6F9CA2;"
-                                @mouseenter="$el.style.background='#5B878D'"
-                                @mouseleave="$el.style.background='#6F9CA2'">
+                                style="background:#c9a227;"
+                                @mouseenter="$el.style.background='#a9851f'"
+                                @mouseleave="$el.style.background='#c9a227'">
                             Add to Bag
                         </button>
                     @endif
@@ -333,7 +333,7 @@
             {{-- Top-left badges --}}
             <div class="absolute top-2 left-2 sm:top-3 sm:left-3 flex flex-col gap-1">
                 @if($hasDiscount)
-                    <span class="bg-[#F8931D] text-white font-bold rounded-full text-[8px] w-8 h-8 flex items-center justify-center sm:w-auto sm:h-auto sm:text-[10px] sm:px-2 sm:py-0.5 sm:rounded-md">{{ round($discount) }}%<span class="hidden sm:inline">&nbsp;Off</span></span>
+                    <span class="bg-[#7a1f2b] text-white font-bold rounded-full text-[8px] w-8 h-8 flex items-center justify-center sm:w-auto sm:h-auto sm:text-[10px] sm:px-2 sm:py-0.5 sm:rounded-md">{{ round($discount) }}%<span class="hidden sm:inline">&nbsp;Off</span></span>
                 @endif
             </div>
 
@@ -342,7 +342,7 @@
                 <div class="absolute top-3 right-3 flex flex-col gap-1.5 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200">
                     @if($showWishlist)
                         <button @click="$store.wishlist.toggle({{ $product->id }})"
-                                class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#6F9CA2] focus:ring-offset-1"
+                                class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#c9a227] focus:ring-offset-1"
                                 :style="$store.wishlist.has({{ $product->id }}) ? 'color: #ef4444;' : 'color: #737373;'"
                                 aria-label="Toggle wishlist">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -352,7 +352,7 @@
                     @endif
                     @if($showQuickViewBtn)
                         <button @click="$dispatch('quick-view', { productId: {{ $product->id }} })"
-                                class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-neutral-600 hover:text-[#6F9CA2] transition-colors focus:outline-none focus:ring-2 focus:ring-[#6F9CA2] focus:ring-offset-1"
+                                class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-neutral-600 hover:text-[#c9a227] transition-colors focus:outline-none focus:ring-2 focus:ring-[#c9a227] focus:ring-offset-1"
                                 aria-label="Quick view">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -377,14 +377,14 @@
             @if($product->brand)
                 <p class="text-[10px] text-neutral-600 uppercase tracking-wider mb-0.5">{{ $product->brand->name }}</p>
             @elseif($product->category)
-                <a href="{{ route('category.show', $product->category) }}" class="text-[10px] text-neutral-600 uppercase tracking-wider mb-0.5 block hover:text-[#6F9CA2]">
+                <a href="{{ route('category.show', $product->category) }}" class="text-[10px] text-neutral-600 uppercase tracking-wider mb-0.5 block hover:text-[#c9a227]">
                     {{ $product->category->name }}
                 </a>
             @endif
 
             {{-- Product Name --}}
             <h3 class="text-[13px] font-medium text-[#222] mb-1.5 leading-snug min-h-9">
-                <a href="{{ route('product.show', $product) }}" class="line-clamp-2 hover:text-[#6F9CA2] transition-colors">
+                <a href="{{ route('product.show', $product) }}" class="line-clamp-2 hover:text-[#c9a227] transition-colors">
                     {{ $product->name }}
                 </a>
             </h3>
@@ -418,13 +418,13 @@
                             @foreach(array_slice($cardSizes, 0, $maxInline) as $sz)
                                 <button type="button"
                                         @click.stop.prevent="selectedSize = @js($sz)"
-                                        :class="selectedSize === @js($sz) ? 'border-[#6F9CA2] bg-[#6F9CA2] text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'"
+                                        :class="selectedSize === @js($sz) ? 'border-[#c9a227] bg-[#c9a227] text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'"
                                         class="text-[11px] px-1.5 py-0.5 border rounded leading-none transition-colors min-w-[24px] text-center">
                                     {{ $sz }}
                                 </button>
                             @endforeach
                             @if(count($cardSizes) > $maxInline)
-                                <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#6F9CA2]">+{{ count($cardSizes) - $maxInline }} more</a>
+                                <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#c9a227]">+{{ count($cardSizes) - $maxInline }} more</a>
                             @endif
                         </div>
                     @endif
@@ -436,12 +436,12 @@
                                 <button type="button"
                                         title="{{ $clr }}"
                                         @click.stop.prevent="selectedColor = @js($clr)"
-                                        :class="selectedColor === @js($clr) ? 'ring-2 ring-[#6F9CA2] ring-offset-1' : ''"
+                                        :class="selectedColor === @js($clr) ? 'ring-2 ring-[#c9a227] ring-offset-1' : ''"
                                         class="w-5 h-5 rounded-full transition-all border-0"
                                         style="background:{{ $hex }};"></button>
                             @endforeach
                             @if(count($cardColors) > $maxInline)
-                                <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#6F9CA2]">+{{ count($cardColors) - $maxInline }} more</a>
+                                <a href="{{ route('product.show', $product) }}" class="text-[10px] text-neutral-500 hover:text-[#c9a227]">+{{ count($cardColors) - $maxInline }} more</a>
                             @endif
                         </div>
                     @endif
@@ -455,16 +455,16 @@
                         @if($hasVariantOptions)
                             <button @click.stop.prevent="addToCart()"
                                     :class="isNotifyMode ? 'border border-neutral-200 text-neutral-600 bg-white hover:bg-neutral-50' : 'text-white'"
-                                    :style="isNotifyMode ? '' : (canAdd ? 'background:#6F9CA2;' : 'background:#9CA3AF;')"
+                                    :style="isNotifyMode ? '' : (canAdd ? 'background:#c9a227;' : 'background:#9CA3AF;')"
                                     class="w-full py-2.5 text-[13px] font-semibold rounded-md transition-colors duration-200">
                                 <span x-text="isNotifyMode ? 'Notify Me' : (canAdd ? 'Add to Bag' : 'Select options')">Add to Bag</span>
                             </button>
                         @else
                             <button @click="$store.cart.add({{ $product->id }})"
                                     class="w-full py-2.5 text-[13px] font-semibold text-white rounded-md transition-colors duration-200"
-                                    style="background:#6F9CA2;"
-                                    @mouseenter="$el.style.background='#5B878D'"
-                                    @mouseleave="$el.style.background='#6F9CA2'">
+                                    style="background:#c9a227;"
+                                    @mouseenter="$el.style.background='#a9851f'"
+                                    @mouseleave="$el.style.background='#c9a227'">
                                 Add to Bag
                             </button>
                         @endif

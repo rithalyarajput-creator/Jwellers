@@ -60,7 +60,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
-    <meta name="theme-color" content="#6F9CA2">
+    <meta name="theme-color" content="#c9a227">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -188,7 +188,7 @@
 
             {{-- Logo --}}
             <div class="pt-6 pb-2 px-6 text-center">
-                <img src="{{ asset('images/colorlogo.png') }}" alt="ForeverKids" class="h-10 mx-auto mb-3 object-contain">
+                <img src="{{ asset('images/colorlogo.png') }}" alt="Jwellers" class="h-10 mx-auto mb-3 object-contain">
                 <h2 class="text-2xl font-bold text-neutral-900"
                     x-text="$store.authModal.mode === 'login' ? 'Login or Signup' : 'Create Account'"></h2>
             </div>
@@ -206,7 +206,7 @@
                     <div>
                         <label class="block text-sm font-medium text-neutral-700 mb-1.5">Email Address</label>
                         <input type="email" x-model="email" required autofocus
-                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                placeholder="you@example.com">
                         <template x-if="$store.authModal.errors.email">
                             <p class="mt-1 text-xs text-error-600" x-text="$store.authModal.errors.email[0]"></p>
@@ -216,11 +216,11 @@
                     <div>
                         <div class="flex items-center justify-between mb-1">
                             <label class="text-sm font-medium text-neutral-700">Password</label>
-                            <a href="{{ route('password.request') }}" class="text-xs text-[#6F9CA2] hover:text-[#5B878D]">Forgot password?</a>
+                            <a href="{{ route('password.request') }}" class="text-xs text-[#c9a227] hover:text-[#a9851f]">Forgot password?</a>
                         </div>
                         <div class="relative" x-data="{ show: false }">
                             <input :type="show ? 'text' : 'password'" x-model="password" required
-                                   class="w-full px-3 py-2.5 pr-10 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                                   class="w-full px-3 py-2.5 pr-10 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                    placeholder="Enter your password">
                             <button type="button" @click="show = !show" class="absolute inset-y-0 right-0 pr-3 flex items-center text-neutral-600 hover:text-neutral-600">
                                 <svg x-show="!show" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
@@ -233,13 +233,13 @@
                     </div>
 
                     <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="checkbox" x-model="remember" class="w-4 h-4 rounded border-neutral-300 text-[#6F9CA2] focus:ring-0">
+                        <input type="checkbox" x-model="remember" class="w-4 h-4 rounded border-neutral-300 text-[#c9a227] focus:ring-0">
                         <span class="text-sm text-neutral-600">Keep me signed in</span>
                     </label>
 
                     <button type="submit"
                             :disabled="$store.authModal.isLoading"
-                            class="w-full py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors disabled:opacity-50">
+                            class="w-full py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors disabled:opacity-50">
                         <span x-show="!$store.authModal.isLoading">CONTINUE</span>
                         <span x-show="$store.authModal.isLoading" x-cloak class="flex items-center justify-center gap-2">
                             <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
@@ -249,8 +249,8 @@
                 </form>
 
                 <p class="mt-4 text-center text-sm text-neutral-600">
-                    New to ForeverKids?
-                    <button @click="$store.authModal.switchMode('register')" class="font-semibold text-[#6F9CA2] hover:text-[#5B878D]">Create an account</button>
+                    New to Jwellers?
+                    <button @click="$store.authModal.switchMode('register')" class="font-semibold text-[#c9a227] hover:text-[#a9851f]">Create an account</button>
                 </p>
             </div>
 
@@ -262,7 +262,7 @@
                     <div>
                         <label class="block text-sm font-medium text-neutral-700 mb-1.5">Full Name</label>
                         <input type="text" x-model="name" required
-                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                placeholder="Enter your full name">
                         <template x-if="$store.authModal.errors.full_name">
                             <p class="mt-1 text-xs text-error-600" x-text="$store.authModal.errors.full_name[0]"></p>
@@ -272,7 +272,7 @@
                     <div>
                         <label class="block text-sm font-medium text-neutral-700 mb-1.5">Email Address</label>
                         <input type="email" x-model="email" required
-                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                placeholder="you@example.com">
                         <template x-if="$store.authModal.errors.email">
                             <p class="mt-1 text-xs text-error-600" x-text="$store.authModal.errors.email[0]"></p>
@@ -282,7 +282,7 @@
                     <div>
                         <label class="block text-sm font-medium text-neutral-700 mb-1.5">Password</label>
                         <input type="password" x-model="password" required
-                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                placeholder="Min 8 characters">
                         <template x-if="$store.authModal.errors.password">
                             <p class="mt-1 text-xs text-error-600" x-text="$store.authModal.errors.password[0]"></p>
@@ -292,13 +292,13 @@
                     <div>
                         <label class="block text-sm font-medium text-neutral-700 mb-1.5">Confirm Password</label>
                         <input type="password" x-model="password_confirmation" required
-                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#6F9CA2] focus:ring-0 transition-colors"
+                               class="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-[#c9a227] focus:ring-0 transition-colors"
                                placeholder="Repeat password">
                     </div>
 
                     <button type="submit"
                             :disabled="$store.authModal.isLoading"
-                            class="w-full py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors disabled:opacity-50">
+                            class="w-full py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors disabled:opacity-50">
                         <span x-show="!$store.authModal.isLoading">CREATE ACCOUNT</span>
                         <span x-show="$store.authModal.isLoading" x-cloak class="flex items-center justify-center gap-2">
                             <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
@@ -309,14 +309,14 @@
 
                 <p class="mt-4 text-center text-sm text-neutral-600">
                     Already have an account?
-                    <button @click="$store.authModal.switchMode('login')" class="font-semibold text-[#6F9CA2] hover:text-[#5B878D]">Sign in</button>
+                    <button @click="$store.authModal.switchMode('login')" class="font-semibold text-[#c9a227] hover:text-[#a9851f]">Sign in</button>
                 </p>
             </div>
 
             {{-- Footer --}}
             <div class="px-6 pb-5 pt-2 text-center">
                 <p class="text-[11px] text-neutral-600 leading-relaxed">
-                    By continuing, I agree to ForeverKids'
+                    By continuing, I agree to Jwellers'
                     <a href="{{ route('terms') }}" class="text-neutral-600 underline">T&C</a>,
                     <a href="{{ route('privacy') }}" class="text-neutral-600 underline">Privacy Policy</a>
                 </p>
@@ -356,7 +356,7 @@
                 x-transition:leave-start="opacity-100 translate-y-0"
                 x-transition:leave-end="opacity-0 translate-y-4"
                 @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-                class="fixed bottom-20 lg:bottom-6 right-4 z-40 w-10 h-10 bg-[#6F9CA2] hover:bg-[#5B878D] text-white rounded-full shadow-lg flex items-center justify-center transition-colors"
+                class="fixed bottom-20 lg:bottom-6 right-4 z-40 w-10 h-10 bg-[#c9a227] hover:bg-[#a9851f] text-white rounded-full shadow-lg flex items-center justify-center transition-colors"
                 aria-label="Back to top">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
         </button>
@@ -460,8 +460,8 @@
                                     </div>
                                     <button @click="$store.cart.add(rec.id)"
                                             class="w-full mt-1.5 text-xs font-semibold py-1.5 rounded transition-colors"
-                                            style="background:#F8931D;color:#fff;"
-                                            onmouseenter="this.style.background='#E07E0A'" onmouseleave="this.style.background='#F8931D'">
+                                            style="background:#7a1f2b;color:#fff;"
+                                            onmouseenter="this.style.background='#5f1721'" onmouseleave="this.style.background='#7a1f2b'">
                                         Add to Cart
                                     </button>
                                 </div>
@@ -483,20 +483,20 @@
                         :disabled="$store.cart.checkoutPending || $store.cart.itemCount === 0"
                         :class="{ 'opacity-60 cursor-wait': $store.cart.checkoutPending, 'opacity-50 cursor-not-allowed': $store.cart.itemCount === 0 }"
                         class="w-full py-2.5 px-3 flex flex-col items-center justify-center gap-0.5 rounded-full font-bold tracking-wide text-white transition-all shadow-md hover:shadow-lg mb-2 cursor-pointer"
-                        style="background: linear-gradient(135deg, #6F9CA2 0%, #4f7d83 100%); border: 1px solid #4f7d83;">
+                        style="background: linear-gradient(135deg, #c9a227 0%, #4f7d83 100%); border: 1px solid #4f7d83;">
                     <span class="text-[12px] font-bold leading-none" x-show="!$store.cart.checkoutPending">CHECKOUT</span>
                     <span class="text-[12px] font-bold leading-none" x-show="$store.cart.checkoutPending" x-cloak>REDIRECTING...</span>
                     <span class="text-[8px] font-medium opacity-90 leading-none">Powered by <span class="font-bold tracking-tight">Shiprocket</span></span>
                 </button>
                 <a href="{{ route('cart.index') }}"
                    class="block w-full text-center py-2 text-xs font-medium rounded-lg transition-colors"
-                   style="color:#6F9CA2;">
+                   style="color:#c9a227;">
                     View full cart
                 </a>
                 <button @click="$store.cart.close()"
                         class="block w-full text-center py-2 text-sm font-medium rounded-lg transition-colors"
-                        style="color:#6F9CA2;"
-                        onmouseenter="this.style.background='#f0f7f8'" onmouseleave="this.style.background='transparent'">
+                        style="color:#c9a227;"
+                        onmouseenter="this.style.background='#fbf7ef'" onmouseleave="this.style.background='transparent'">
                     Continue Shopping
                 </button>
             </div>
@@ -548,7 +548,7 @@
 
             {{-- Loading State --}}
             <div x-show="loading" class="flex items-center justify-center py-20">
-                <svg class="w-8 h-8 animate-spin text-[#6F9CA2]" fill="none" viewBox="0 0 24 24">
+                <svg class="w-8 h-8 animate-spin text-[#c9a227]" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                 </svg>
@@ -567,7 +567,7 @@
                                 <template x-for="(img, i) in product.images.slice(0, 5)" :key="i">
                                     <button @click="activeImageIndex = i"
                                             class="w-10 h-10 rounded border-2 overflow-hidden bg-white transition-colors"
-                                            :class="activeImageIndex === i ? 'border-[#6F9CA2]' : 'border-white/80'">
+                                            :class="activeImageIndex === i ? 'border-[#c9a227]' : 'border-white/80'">
                                         <img :src="img" class="w-full h-full object-cover">
                                     </button>
                                 </template>
@@ -628,12 +628,12 @@
                         <div class="mt-auto space-y-2">
                             <template x-if="product?.in_stock">
                                 <button @click="$store.cart.add(product.id); close()"
-                                        class="w-full py-2.5 bg-[#F8931D] hover:bg-[#E07E0A] text-white font-semibold rounded-lg text-sm transition-colors">
+                                        class="w-full py-2.5 bg-[#7a1f2b] hover:bg-[#5f1721] text-white font-semibold rounded-lg text-sm transition-colors">
                                     Add to Bag
                                 </button>
                             </template>
                             <a :href="product?.url"
-                               class="block w-full py-2.5 text-center text-sm font-medium text-[#6F9CA2] border border-[#6F9CA2]/30 rounded-lg hover:bg-[#6F9CA2]/5 transition-colors">
+                               class="block w-full py-2.5 text-center text-sm font-medium text-[#c9a227] border border-[#c9a227]/30 rounded-lg hover:bg-[#c9a227]/5 transition-colors">
                                 View Full Details
                             </a>
                         </div>

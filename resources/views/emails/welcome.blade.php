@@ -1,18 +1,18 @@
 @component('mail::message')
-# Welcome to ForeverKids!
+# Welcome to Jwellers!
 
 Hi {{ $user->first_name }},
 
-We are thrilled to have you join the ForeverKids family! Thank you for creating your account with us.
+We are thrilled to have you join the Jwellers family! Thank you for creating your account with us.
 
-At ForeverKids, we are passionate about providing adorable, high-quality clothing for your little ones. From everyday essentials to special occasion outfits, we have everything to keep your kids looking and feeling their best.
+At Jwellers, we are passionate about crafting exquisite, high-quality jewellery for every occasion. From everyday elegance to special occasion statement pieces, we have everything to help you shine.
 
 ---
 
 ## Here Is What You Can Look Forward To
 
-- **Curated Collections** -- Handpicked styles for every age and occasion
-- **Quality You Can Trust** -- Comfortable, durable fabrics that kids love
+- **Curated Collections** -- Handpicked designs for every style and occasion
+- **Quality You Can Trust** -- Genuine hallmarked gold, diamond, and silver
 - **Exclusive Deals** -- Member-only discounts and early access to sales
 - **Easy Returns** -- Hassle-free returns within 7 days of delivery
 
@@ -35,8 +35,8 @@ Visit Your Account
 
 If you have any questions or need assistance, our friendly support team is always ready to help. Just reply to this email or visit our help center.
 
-We cannot wait to help you find the perfect outfits for your little ones!
+We cannot wait to help you find the perfect piece!
 
 Warm regards,
-**ForeverKids**
+**Jwellers**
 @endcomponent
